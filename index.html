@@ -2,73 +2,139 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-	*{margin: 0;padding: 0;}
-	#div1{width: 200px;height: 200px;background-color: red;position: absolute;}
-	#div2{width: 300px;height: 300px;background-color: blue;position: absolute;}
-	</style>
+	<title>柠檬网络科技</title>
+	<link rel="stylesheet" type="text/css" href="css/orange.css">
 </head>
 <body>
-	<div id="div1"></div>
-	<div id="div2"></div>
-	<script type="text/javascript">
-	window.onload=function(){
-		new Drag("div1");
-		new Drag("div2");
-	}
-		
-
-		function Drag(id){
-			this.switchA = false;
-			this.disX = 0;
-			this.disY = 0;
-			this.oDiv = document.getElementById(id);
-			var _this = this;
-			this.oDiv.onmousedown=function(){
-				_this.fndown();
-			};
-			document.onmousemove=function(){
-				_this.fnmove();
-			};
-			document.onmouseup=function(){
-				_this.fnup();
-			};
-		}
-		Drag.prototype.fndown=function(ev){
-				var oEvent = ev || event;
-				this.disX = oEvent.clientX - this.oDiv.offsetLeft;
-				this.disY = oEvent.clientY - this.oDiv.offsetTop;
-				this.switchA = true;
-
-		}
-
-		Drag.prototype.fnmove=function(ev){
-			if(this.switchA){
-				var oEvent = ev || event;
-				var l = oEvent.clientX-this.disX;
-				var t = oEvent.clientY-this.disY;
-				if(l<0){
-					l=0;
-				}
-				else if(l>document.documentElement.clientWidth - this.oDiv.offsetWidth){
-					l = document.documentElement.clientWidth - this.oDiv.offsetWidth
-				}
-				if(t<0){
-					t=0;
-				}
-				else if(t>document.documentElement.clientHeight - this.oDiv.offsetHeight){
-					t=document.documentElement.clientHeight - this.oDiv.offsetHeight
-				}
-				this.oDiv.style.left = l  +"px";
-				this.oDiv.style.top = t  +"px";
-				}
-		}
-		Drag.prototype.fnup=function(){
-			// document.onmousemove = null;
-			// document.onmouseup = null;
-			this.switchA = false;
-		}
-	</script>
+	<div class="top">
+		<div class="top_inner">
+			<div class="box1">
+				<a href=""><img class="png" src="images/logo.png" alt=""></a>
+				<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js" ></script>
+				<script type="text/javascript"> DD_belatedPNG.fix('.png'); </script>
+				<h3>柠檬网络科技</h3>
+				<p class="word">—N I N G M O N G—</p>
+			</div>
+			<div class="box2">
+				<img class="png" src="images/1.png" alt="">
+				<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js" ></script>
+				<script type="text/javascript"> DD_belatedPNG.fix('.png'); </script>
+				<p class="number">010-12345678</p>
+				<a href=""><i class="iconfont">&#xe733;</i></a>
+				<a href=""><i class="iconfont">&#xe618;</i></a>
+				<a href=""><i class="iconfont">&#xe7f0;</i></a>
+				<a href=""><i class="iconfont">&#xe610;</i></a>
+			</div>
+		</div>
+	</div>
+	<div class="nav">
+		<div class="nav_inner">
+			<a href="">首页</a>
+			<a href="">网站建设</a>
+			<a href="">微信营销</a>
+			<a href="">手机网站</a>
+			<a href="">整体解决方案</a>
+			<a href="">我们的优势</a>
+			<a href="">案例展示</a>
+			<a href="">联系我们</a>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="banner_inner">
+			<a href=""><div class="circled"></div></a>
+			<a href=""><div class="circle"></div></a>
+			<a href=""><div class="circle"></div></a>
+			<a href=""><div class="circle"></div></a>
+			<a href=""><div class="circle"></div></a>
+		</div>
+	</div>
+	<div class="service">
+		<div class="service_inner">
+			<h1>我们的服务</h1>
+			<div class="group">
+				<a href=""><i class="icon">&#xe9fd;</i></a>
+				<h2>营销型网站建设</h2>
+				<p class="text">专业团队为您的企业量身打造属于您的营销网站，带您进入营销时代</p>
+				<a href=""><div class="pic"><p class="zixun">咨询详情</p></div></a>
+			</div>
+			<div class="group">
+				<a href=""><i class="icon">&#xf00c9;</i></a>
+				<h2>APP网站建设</h2>
+				<p class="text">为您开启APP营销时代，较高的用户体验，病毒式的传播专业APP网站建设</p>
+				<a href=""><div class="pic"><p class="zixun">咨询详情</p></div></a>
+			</div>
+			<div class="group">
+				<a href=""><i class="ic">&#xf00a7;</i></a>
+				<h2>PC网站建设</h2>
+				<p class="text">专业的设计团队为您建设超强的用户体验度、让客户一目了然的PC端网站</p>
+				<a href=""><div class="pic"><p class="zixun">咨询详情</p></div></a>
+			</div>
+			<div class="group">
+				<a href=""><i class="icon">&#xe646;</i></a>
+				<h2>微信营销</h2>
+				<p class="text">提供一站式解决方案，指上的营销、病毒式的传播形式让你在行业遥遥领先</p>
+				<a href=""><div class="pic"><p class="zixun">咨询详情</p></div></a>
+			</div>
+		</div>
+	</div>
+	<div class="case">
+		<div class="case_inner">
+			<h1>案例展示</h1>
+			<div class="show">
+				<p class="step">STEP1</p>
+				<p class="aaa">营销型网站</p>
+				<a href=""><div class="chakan"><p class="point">点击进入查看</p></div></a>
+			</div>
+			<div class="show">
+				<p class="step">STEP2</p>
+				<p class="aaa">APP客户端</p>
+				<a href=""><div class="chakan"><p class="point">点击进入查看</p></div></a>
+			</div>
+			<div class="show">
+				<p class="step">STEP3</p>
+				<p class="aaa">PC网站</p>
+				<a href=""><div class="chakan"><p class="point">点击进入查看</p></div></a>
+			</div>
+			<div class="show">
+				<p class="step">STEP4</p>
+				<p class="aaa">WAP手机版</p>
+				<a href=""><div class="chakan"><p class="point">点击进入查看</p></div></a>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<div class="copyright_inner">
+			<div class="up">
+				<p class="bbb"><a href="">网站首页</a>|<a href="">营销型网站建设</a>|<a href="">微信营销</a>|<a href="">手机网站</a>|<a href="">整体解决方案</a>|<a href="">我们的优势</a>|<a href="">案例展示</a>|<a href="">常见问题</a>|<a href="">联系我们</a></p>
+			</div>
+			<div class="mid">
+				<div class="left">
+					<div class="box3">
+						<a href=""><img class="png" src="images/logo.png" alt=""></a>
+						<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js" ></script>
+						<script type="text/javascript"> DD_belatedPNG.fix('.png'); </script>
+						<h4>柠檬网络科技</h4>
+						<p class="words">—N I N G M O N G—</p>
+					</div>
+					<div class="box4">
+						<img src="images/a.jpg" alt="">
+						<p class="tel">建站热线：<span>010-12345678</span></p>
+					</div>
+					<div class="box5">
+						<img src="images/b.jpg" alt="">
+						<p class="email">邮箱：<span>ningmeng@ 126.com</span></p>
+					</div>
+				</div>
+				<div class="right">
+					<img class="img1" src="images/11.png" alt="">
+					<img class="img2" src="images/10.jpg" alt="">
+				</div>
+			</div>
+			<div class="down">
+				<p class="ccc"><a href="">我们的优势</a>|<a href="">案例展示</a>|<a href="">常见问题</a>|<a href="">联系我们</a></p>
+				<p class="ddd">Copyright @2014 柠檬网络科技有限责任公司 || Chnyoo.cn All Rights Reserved 京ICP备12005221号</p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
