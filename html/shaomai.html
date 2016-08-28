@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鲜肉烧麦</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/mizhipaigu.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//iconfont划过大小
+		$(".m_up_right>ul>li").hover(function(){
+			$(this).find(".iconfont").css("font-size","35px")
+		},function(){
+			$(this).find(".iconfont").css("font-size","31px")
+		});
+		//简介原料
+		$(".btn2").click(function(){
+			$(this).parent().find(".li1").hide().siblings().show()
+		});
+		$(".btn1").click(function(){
+			$(this).parent().find(".li2").hide().siblings().show()
+		});
+		$(".btn-primary").click(function(){
+			alert("收藏成功！")
+		});
+		//添加评论
+		$("body").on("click",".btn-info",function(){
+			var v = $(this).prev().val();
+			var it = $("<li>" +v+"<a class='del'>删除</a></li>");
+			$(".c_list").append(it);
+	        $(".del").click(function(){
+            $(this).parent().remove();
+		})
+		});
+	})
+
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="../html/login.html" >用户登录</a></li>
+		    		<li><a href="../html/zhuce.html" >用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp首页&nbsp</a>></li>
+				<li><a href="#">&nbsp中华菜系&nbsp</a>></li>
+				<li>&nbsp鲜肉烧麦</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_up">
+			<div class="m_up_left"><img src="../img/shaomai/0.jpg" alt="1111"></div>
+			<div class="m_up_right">
+				<ul>
+					<li><i class="iconfont iconfont1">&#xe669;</i> 让做饭成为一种艺术</li>
+					<li><i class="iconfont iconfont2">&#xe65e;</i> 鲜肉烧麦</li>
+					<li><i class="iconfont iconfont3">&#xe619;</i> 工艺：&nbsp&nbsp蒸</li>
+					<li><i class="iconfont iconfont4">&#xe638;</i> 口味：&nbsp&nbsp咸鲜味</li>
+					<li><i class="iconfont iconfont5">&#xe6c0;</i> 烹饪时间：<15分钟</li>
+					<li><i class="iconfont iconfont6">&#xe611;</i> 暖身更暖心</li>
+				</ul>
+				<div class="m_up_right_p"><p>鲜肉烧麦</p></div>
+				<div class="m_up_right_c">
+					<button class="btn btn-default btn1" type="submit">简介</button>
+					<button class="btn btn-default btn2" type="submit">用料</button>
+					<ul>
+						<li class="li1">
+							<p> 前几天家人就喊着要吃烧麦，说好久没吃馋这口了。尽管这段时间比较忙，但家人的要求再忙也是要尽力做到的</p>
+							<p>传统烧麦通常是用糯米制作而成，这次我选用的是新鲜猪肉，再配上点甜玉米和胡萝卜，这样，不仅丰富了营养和口感，味道也是特别鲜美。
+在寒冷的冬天，能和家人聚在一起，吃着热气腾腾的美味菜肴，既暖身更暖心哟！</p>
+						</li>
+						<li class="li2">
+							<p>猪肉沫 250克   混沌皮 100克   盐、糖、白胡椒粉、鸡精 1克   葱花、姜末、生抽 5克   甜玉米 30克   胡萝卜20克   玉米淀粉 8克</p>
+						</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<button type="button" class="btn btn-primary btn-lg active">收 藏</button>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="m_c_up">
+				<h3>做法：</h3>
+			</div>
+			<ol>
+				<li>备好食材：猪肉末<img src="../img/shaomai/1.jpg" alt=""></li>
+				<li>葱花、姜末、甜玉米粒、胡萝卜切末<img src="../img/shaomai/2.jpg" alt=""></li>
+				<li>肉末中放入葱花、姜末、甜玉米、胡萝卜末、盐、生抽、糖、玉米淀粉、白胡椒粉、鸡精<img src="../img/shaomai/3.jpg" alt=""></li>
+				<li>用筷子顺同一方向搅拌均匀（最好不要放水），备好馄饨皮<img src="../img/shaomai/4.jpg" alt=""></li>
+				<li>取一张馄饨皮<img src="../img/shaomai/5.jpg" alt=""></li>
+				<li>将4个边角剪成圆弧形（不剪也可以，主要是为了好看）<img src="../img/shaomai/6.jpg" alt=""></li>
+				<li>将肉馅放在面皮上<img src="../img/shaomai/7.jpg" alt=""></li>
+				<li>用虎口收紧的同时，把肉馅往上推，包成烧麦形状<img src="../img/shaomai/8.jpg" alt=""></li>
+				<li>全部包好后放入蒸笼里<img src="../img/shaomai/9.jpg" alt=""></li>
+				<li>
+盖上盖子，大火将水烧开，转中火蒸制15分钟即可，取出后就可以趁热吃啦，沾上蘸料更够味哟<img src="../img/shaomai/10.jpg" alt="">
+				</li>
+				
+			</ol>
+			<div class="m_c_down">
+				<h3>烹饪技巧：</h3>
+			</div>
+			<div class="m_c_last">
+				<ul>
+					<li>1、搅拌肉馅时最好别放水，否则肉馅太稀不好塑形
+
+</li>
+					<li>2、馅料中可以放自己喜欢的食材</li>
+					<li>3、笼屉上要放防粘垫，或刷层薄油</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="comment_inner">
+			<form action="" class="c_text">
+				<h4>游客评论：</h4>
+				<textarea class="form-control control1" rows="5"></textarea>
+				<button type="button" class="btn btn-info">发表评论</button>
+			</form>
+			<div class="box2"></div>
+			<ul class="c_list">
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

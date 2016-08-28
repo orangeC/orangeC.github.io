@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>叉烧鸭腿</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/mizhipaigu.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//iconfont划过大小
+		$(".m_up_right>ul>li").hover(function(){
+			$(this).find(".iconfont").css("font-size","35px")
+		},function(){
+			$(this).find(".iconfont").css("font-size","31px")
+		});
+		//简介原料
+		$(".btn2").click(function(){
+			$(this).parent().find(".li1").hide().siblings().show()
+		});
+		$(".btn1").click(function(){
+			$(this).parent().find(".li2").hide().siblings().show()
+		});
+		$(".btn-primary").click(function(){
+			alert("收藏成功！")
+		});
+		$("body").on("click",".btn-info",function(){
+			var v = $(this).prev().val();
+			var it = $("<li>" +v+"<a class='del'>删除</a></li>");
+			$(".c_list").append(it);
+	        $(".del").click(function(){
+            $(this).parent().remove();
+		})
+		});
+	})
+
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="../html/login.html" >用户登录</a></li>
+		    		<li><a href="../html/zhuce.html" >用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp首页&nbsp</a>></li>
+				<li><a href="#">&nbsp私家菜&nbsp</a>></li>
+				<li>&nbsp叉烧鸭腿</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_up">
+			<div class="m_up_left"><img src="../img/chashaoyatui/8.jpg" alt="1111"></div>
+			<div class="m_up_right">
+				<ul>
+					<li><i class="iconfont iconfont1">&#xe669;</i> 颜色好看又好吃</li>
+					<li><i class="iconfont iconfont2">&#xe65e;</i> 叉烧鸭腿	</li>
+					<li><i class="iconfont iconfont3">&#xe619;</i> 工艺：&nbsp&nbsp烤</li>
+					<li><i class="iconfont iconfont4">&#xe638;</i> 口味：&nbsp&nbsp其它口味</li>
+					<li><i class="iconfont iconfont5">&#xe6c0;</i> 烹饪时间：<30分钟</li>
+					<li><i class="iconfont iconfont6">&#xe611;</i> 美白美容抗衰老</li>
+				</ul>
+				<div class="m_up_right_p"><p>叉烧鸭腿</p></div>
+				<div class="m_up_right_c">
+					<button class="btn btn-default btn1" type="submit">简介</button>
+					<button class="btn btn-default btn2" type="submit">用料</button>
+					<ul>
+						<li class="li1">
+							<p>鸭肉是一种美味佳肴，适于滋补，是各种美味名菜的主要原料。人们常言“鸡鸭鱼肉”四大荤，鸭肉蛋白质含量比畜肉含量高得多，脂肪含量适中且分布较均匀。周六去逛超市买了两个鸭腿回来，学着做了一下，味道还真不错！</p>
+							<p>  鸭肉不错，非常温补，而秋之初时中秋前后正是夏秋之交，人比较容易上火干燥，鸭肉是非常适合这个时节吃滴。
+当鲜嫩滴鸭腿经过叉烧酱滴甜蜜、朗姆酒滴醉香、烤箱滴高温、火龙果和葡萄滴陪伴，那种诱人滴色与味，应该正适合摆到你家滴中秋餐桌上吧？合家团圆滴中秋夜宴，一道精致滴西餐料理，也同样适合我朝滴文史遗留噢~~</p>
+						</li>
+						<li class="li2">
+							<p>火龙果50克 葡萄15克 洋葱25克 橄榄油一大勺 朗姆酒2小勺 食盐0.5克 蜂蜜适量 叉烧酱一大勺 鸭腿250克</p>
+						</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<button type="button" class="btn btn-primary btn-lg active">收 藏</button>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="m_c_up">
+				<h3>做法：</h3>
+			</div>
+			<ol>
+				<li>鸭腿洗净，剔去骨头、肥油、筋，用刀背横竖各敲剁几下</li>
+				<li>将鸭腿肉放入大碗中，加入叉烧酱、盐、白朗姆酒、洋葱<img src="../img/chashaoyatui/1.jpg" alt=""></li>
+				<li>用手抓拌一会儿，使肉均匀地沾满调料，盖上保鲜膜，放入冰箱冷藏室12小时左右</li>
+				<li>将腌好的鸭腿肉取出，挑出洋葱，与肉分开<img src="../img/chashaoyatui/2.jpg" alt=""></li>
+				<li>煎锅中倒入橄榄油，略晃动锅子使之均匀地沾到油，待油热后将鸭腿肉皮朝下放入，小火煎3分钟左右，视鸭腿皮颜色变深后关火</li>
+				<li>烤箱预热到180度。烤盘中铺上油纸，摆上洋葱，再将鸭腿肉皮朝下摆到洋葱上，在表面肉上刷些蜂蜜，送入烤箱中层，上下火，烤13分钟左右。中间烤到7分钟左右时取出翻面，再在表面皮上刷些蜂蜜，送入烤箱继续烤至熟<img src="../img/chashaoyatui/3.jpg" alt=""></li>
+				<li>取出烤好的鸭腿肉，晾至微温，用刀斜刀切成块</li>
+				<li>将鸭腿肉摆入盘中，火龙果切块，葡萄洗净，摆入盘中略加装饰即可<img src="../img/chashaoyatui/4.jpg" alt=""></li>
+				<img src="../img/chashaoyatui/5.jpg" alt="">
+			    <img src="../img/chashaoyatui/6.jpg" alt="">
+				<img src="../img/chashaoyatui/7.jpg" alt="">
+				</ol>
+			<div class="m_c_down">
+				<h3>烹饪技巧：</h3>
+			</div>
+			<div class="m_c_last">
+				<ul>
+					<li>1、鸭腿肉用刀背或肉锤敲剁几下，可以使肉质更软嫩。肉的腌制时间可以自行调整，时间长些容易入味。个人感觉早上上班前腌上，晚上回家就可以烤，这样入味的时间较长，也比较方便；</li>
+					<li>2、烤好的肉晾凉些后再切，这样不容易切散。刀也要比较锋利，最好事先磨下刀；</li>
+					<li>3、可以自己根据喜好选择搭配的蔬菜或水果，再加上薄荷叶或香菜等小叶菜装饰都可以。。</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="comment_inner">
+			<form action="" class="c_text">
+				<h4>游客评论：</h4>
+				<textarea class="form-control control1" rows="5"></textarea>
+				<button type="button" class="btn btn-info">发表评论</button>
+			</form>
+			<div class="box2"></div>
+			<ul class="c_list">
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

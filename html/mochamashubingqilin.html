@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>抹茶麻薯冰淇淋</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/mizhipaigu.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".bingqilin").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".bingqilin").show();
+		});
+		//iconfont划过大小
+		$(".m_up_right>ul>li").hover(function(){
+			$(this).find(".iconfont").css("font-size","35px")
+		},function(){
+			$(this).find(".iconfont").css("font-size","31px")
+		});
+		//简介原料
+		$(".btn2").click(function(){
+			$(this).parent().find(".li1").hide().siblings().show()
+		});
+		$(".btn1").click(function(){
+			$(this).parent().find(".li2").hide().siblings().show()
+		});
+		$(".btn-primary").click(function(){
+			alert("收藏成功！")
+		});
+		//添加评论
+		$("body").on("click",".btn-info",function(){
+			var v = $(this).prev().val();
+			var it = $("<li>" +v+"<a class='del'>删除</a></li>");
+			$(".c_list").append(it);
+	        $(".del").click(function(){
+            $(this).parent().remove();
+		})
+		});
+	})
+
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="../html/login.html" >用户登录</a></li>
+		    		<li><a href="../html/zhuce.html" >用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="bingqilin" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp首页&nbsp</a>></li>
+				<li><a href="#">&nbsp甜品点心&nbsp</a>></li>
+				<li>&nbsp抹茶麻薯冰淇淋</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_up">
+			<div class="m_up_left"><img src="../img/bingqilin/6.jpg" alt="1111"></div>
+			<div class="m_up_right">
+				<ul>
+					<li><i class="iconfont iconfont1">&#xe669;</i> 让夏天成为一种享受</li>
+					<li><i class="iconfont iconfont2">&#xe65e;</i> 抹茶麻薯冰淇淋</li>
+					<li><i class="iconfont iconfont3">&#xe619;</i> 工艺：&nbsp&nbsp蒸</li>
+					<li><i class="iconfont iconfont4">&#xe638;</i> 口味：&nbsp&nbsp甜味</li>
+					<li><i class="iconfont iconfont5">&#xe6c0;</i> 烹饪时间：<10分钟</li>
+					<li><i class="iconfont iconfont6">&#xe611;</i> 诱人的抹茶口味</li>
+				</ul>
+				<div class="m_up_right_p"><p>抹茶麻薯冰淇淋</p></div>
+				<div class="m_up_right_c">
+					<button class="btn btn-default btn1" type="submit">简介</button>
+					<button class="btn btn-default btn2" type="submit">用料</button>
+					<ul>
+						<li class="li1">
+							<p>以前买过抹茶粉，做出来的成品颜色有点暗暗的，又换了一家买，据说直接在上海宇治工厂进货的，感觉做出来的颜色有点浅，也不知道抹茶粉是不是放少了，搭配着红豆，夏天当冷饮很不错哦。现在的人们很喜欢抹茶口味的食物，今天就分享一道抹茶麻糬冰淇淋！</p>
+							<p>还没入夏滴时候，就惦记上了冰淇淋。早早的把冰淇淋机败了回来，已经做了N多回，总算有机会拍张片片了。香草冰淇淋最基础，最经典的味道，也是偶最喜欢滴，当然还可以举一反三做成芒果、抹茶，巧克力等等各种口味快别吃卖的什么植物奶油冰糕了，自己动动手，分分钟搞定安全健康又美味的消夏圣品</p>
+						</li>
+						<li class="li2">
+							<p>麻薯粉150克，抹茶粉150克。凉白开180毫升。白砂糖10克，玉米淀粉；</p>
+						</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<button type="button" class="btn btn-primary btn-lg active">收 藏</button>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="m_c_up">
+				<h3>做法：</h3>
+			</div>
+			<ol>
+				<li>麻薯粉150克，抹茶粉150克。凉白开180毫升。白砂糖10克<img src="../img/bingqilin/1.jpg" alt=""></li>
+				<li>麻薯粉 ，抹茶粉充分混合，拌匀后加180毫升凉白开，搅至没有颗粒后加入糖粉拌匀<img src="../img/bingqilin/2.jpg" alt=""></li>
+				<li>盖上保鲜膜，放微波炉里高火2分钟，取出搅动后重新高火30秒取出，如果没熟再来30秒<img src="../img/bingqilin/3.jpg" alt=""></li>
+				<li>煮熟的抹茶面团凉后，撒上玉米淀粉揉好切开<img src="../img/bingqilin/4.jpg" alt=""></li>
+				<li>迅速包入冰淇淋冷藏食用<img src="../img/bingqilin/5.jpg" alt=""></li>
+				</li>
+				<img src="../img/bingqilin/6.jpg" alt="">
+				<img src="../img/bingqilin/7.jpg" alt="">
+			</ol>
+			<div class="m_c_down">
+				<h3>烹饪技巧：</h3>
+			</div>
+			<div class="m_c_last">
+				<ul>
+					<li>1、煮蛋奶液的时候，一定要用小火，一定不要煮的太开，液体微滚就可以，不然会有块状蛋黄。</li>
+					<li>2、冰箱冷冻的过程，一定要隔一段时间取出搅拌一下，不然会冻成一整块，另外搅拌也会使空气混入，从而更加蓬松一些。</li>
+					<li>3、没有味啉，可以用米酒或料酒加适量白糖代替，尝尝有微微的甜味即可。</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="comment_inner">
+			<form action="" class="c_text">
+				<h4>游客评论：</h4>
+				<textarea class="form-control control1" rows="5"></textarea>
+				<button type="button" class="btn btn-info">发表评论</button>
+			</form>
+			<div class="box2"></div>
+			<ul class="c_list">
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

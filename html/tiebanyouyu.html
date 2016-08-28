@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>铁板鱿鱼</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/mizhipaigu.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//iconfont划过大小
+		$(".m_up_right>ul>li").hover(function(){
+			$(this).find(".iconfont").css("font-size","35px")
+		},function(){
+			$(this).find(".iconfont").css("font-size","31px")
+		});
+		//简介原料
+		$(".btn2").click(function(){
+			$(this).parent().find(".li1").hide().siblings().show()
+		});
+		$(".btn1").click(function(){
+			$(this).parent().find(".li2").hide().siblings().show()
+		});
+		$(".btn-primary").click(function(){
+			alert("收藏成功！")
+		});
+		//添加评论
+		$("body").on("click",".btn-info",function(){
+			var v = $(this).prev().val();
+			var it = $("<li>" +v+"<a class='del'>删除</a></li>");
+			$(".c_list").append(it);
+	        $(".del").click(function(){
+            $(this).parent().remove();
+		})
+		});
+	})
+
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="../html/login.html" >用户登录</a></li>
+		    		<li><a href="../html/zhuce.html" >用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp首页&nbsp</a>></li>
+				<li><a href="#">&nbsp各地小吃&nbsp</a>></li>
+				<li>&nbsp铁板鱿鱼</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_up">
+			<div class="m_up_left"><img src="../img/youyu/0.jpg" alt="1111"></div>
+			<div class="m_up_right">
+				<ul>
+					<li><i class="iconfont iconfont1">&#xe669;</i> 让做饭成为一种艺术</li>
+					<li><i class="iconfont iconfont2">&#xe65e;</i> 铁板鱿鱼</li>
+					<li><i class="iconfont iconfont3">&#xe619;</i> 工艺：&nbsp&nbsp煎</li>
+					<li><i class="iconfont iconfont4">&#xe638;</i> 口味：&nbsp&nbsp香辣味</li>
+					<li><i class="iconfont iconfont5">&#xe6c0;</i> 烹饪时间：<15分钟</li>
+					<li><i class="iconfont iconfont6">&#xe611;</i> 这一盘就是你减肥路上的最大阻力</li>
+				</ul>
+				<div class="m_up_right_p"><p>铁板鱿鱼</p></div>
+				<div class="m_up_right_c">
+					<button class="btn btn-default btn1" type="submit">简介</button>
+					<button class="btn btn-default btn2" type="submit">用料</button>
+					<ul>
+						<li class="li1">
+							<p>  没有铁板在家能吃到美味的烤鱿鱼不？——可以滴~平底锅、烤箱神马的一样解决问题~把腌制好的鱿鱼丢到足够热的平底锅里，立刻滋啦作响，鱿鱼开始打卷，再用锅铲反复按压鱿鱼串，铁板的效果马上就出来了切片的时候不要切得太小，鱿鱼加热回缩比较严重~想要吃的肉肉的口感，那就选只个头稍大的~为了腌制时更入味，吃的时候更方便那就切片穿串，想要来点豪爽的，就把整条鱿鱼对分，半片鱿鱼直接穿串也不错~10分钟的烤鱿鱼，烧烤季必备~</p>
+							<p>
+</p>
+						</li>
+						<li class="li2">
+							<p>鱿鱼 两个   食盐 1茶匙   姜 3片   料酒 1汤匙   植物油 少许   海鲜酱 1汤匙   辣椒粉 1茶匙   孜然粉 1茶匙</p>
+						</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<button type="button" class="btn btn-primary btn-lg active">收 藏</button>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="m_c_up">
+				<h3>做法：</h3>
+			</div>
+			<ol>
+				<li>鱿鱼须清理干净，用刀分成一根根
+				<li>锅里烧开水，放入姜片，倒入料酒，放入鱿鱼须焯水变色即可捞出沥干水
+				<li>鱿鱼须按照大小差不多的用竹签串成一串串<img src="../img/youyu/1.jpg" alt=""></li>
+				<li>平底铸铁锅预热，放入少许植物油，中小火，放入鱿鱼须(最好用铸铁锅，我试过用一边的平底锅，出来的模样也不差，但是味道确实不如铸铁锅来的地道)
+				<li>鱿鱼须一面煎香后翻面(其实平时一次可以煎6串的，不过为了不妨碍拍照，我就分开煎啦)，同时撒点盐，盐可以多一点点，因为会掉落锅里的
+				<li>抹一匙海鲜酱，不要贪多，多了遮盖了鱿鱼的香味，若没有海鲜酱的，可以随便用点老干妈什么的，主要是为了遮盖鱿鱼的腥味<img src="../img/youyu/2.jpg" alt=""></li>
+				<li>接下来就是辣椒粉和孜然粉，根据自己的喜好多多的加吧哈，记得中途的鱿鱼须必须要像街头的老板一样不停翻动咯，鱿鱼是越煎越香的呢
+				<li>焦香程度达到自己喜欢时候就可以出锅享用啦，新鲜热辣呢，注意别烫到嘴巴咯
+
+
+<img src="../img/youyu/3.jpg" alt=""></li>
+<img src="../img/youyu/4.jpg" alt=""></li>
+<img src="../img/youyu/5.jpg" alt=""></li>
+<img src="../img/youyu/6.jpg" alt=""></li>
+<img src="../img/youyu/7.jpg" alt=""></li>
+					<img src="../img/youyu/8.jpg" alt=""></li>
+				
+				</li>
+				
+			</ol>
+			<div class="m_c_down">
+				<h3>烹饪技巧：</h3>
+			</div>
+			<div class="m_c_last">
+				<ul>
+					<li>1、鱿鱼洗干净后，放入加了几滴清水的盆里，浸泡半个小时后，很容易把表皮撕下来。
+
+</li>
+					<li>2、鱿鱼采用高温快速烘烤，以免水分流失太多影响口感。</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="comment_inner">
+			<form action="" class="c_text">
+				<h4>游客评论：</h4>
+				<textarea class="form-control control1" rows="5"></textarea>
+				<button type="button" class="btn btn-info">发表评论</button>
+			</form>
+			<div class="box2"></div>
+			<ul class="c_list">
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

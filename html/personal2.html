@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人信息</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/personal2.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		$(".main_inner ul li").click(function(){
+			var ind = $(this).index();
+			$(".main_i_c").eq(ind).addClass("main_i_d").siblings().removeClass("main_i_d");
+		});
+		$(".main_inner ul li a").click(function(){
+			$(this).parent().find("span").hide();
+			$(this).parent().find(".form2").show(500);
+			$(this).remove()
+		})
+	})
+
+	</script>
+</head>
+<body>
+<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		
+		    		<li><a href="#" >****</a></li>
+		    		<li><a href="#">我的菜谱</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="personal.html">个人中心</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<h3>欢迎来到我的美食空间</h3>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_inner">
+			<h3>个人信息</h3>
+			<form action="" class="form1">
+				<ul>
+					<li><div class="intro">用户ID：</div><input type="text" class="form2 form-control" value="1"></li>
+					<li><div class="intro">用户名：</div><input type="text" class="form2 form-control" value="张三"></li>
+					<li><div class="intro">密&nbsp&nbsp&nbsp码：</div><input type="password" class="form2 form-control" value="123456"></li>
+					<li><div class="intro">性&nbsp&nbsp&nbsp别：</div><input type="text" class="form2 form-control" value="男"></li>
+					<li><div class="intro">邮&nbsp&nbsp&nbsp箱：</div><input type="email" class="form2 form-control" value="123456@qq.com"></li>
+					<li><div class="intro">手机号：</div><input type="text" class="form2 form-control" value="1234567"></li>
+				</ul>
+				<button type="button" class="btn btn-primary btn2">提 交</button>
+			</form>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

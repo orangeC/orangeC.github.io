@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>醋溜卷心菜</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/mizhipaigu.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//iconfont划过大小
+		$(".m_up_right>ul>li").hover(function(){
+			$(this).find(".iconfont").css("font-size","35px")
+		},function(){
+			$(this).find(".iconfont").css("font-size","31px")
+		});
+		//简介原料
+		$(".btn2").click(function(){
+			$(this).parent().find(".li1").hide().siblings().show()
+		});
+		$(".btn1").click(function(){
+			$(this).parent().find(".li2").hide().siblings().show()
+		});
+		$(".btn-primary").click(function(){
+			alert("收藏成功！")
+		});
+		$("body").on("click",".btn-info",function(){
+			var v = $(this).prev().val();
+			var it = $("<li>" +v+"<a class='del'>删除</a></li>");
+			$(".c_list").append(it);
+	        $(".del").click(function(){
+            $(this).parent().remove();
+		})
+		});
+	})
+
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="../html/login.html">用户登录</a></li>
+		    		<li><a href="../html/zhuce.html">用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp首页&nbsp</a>></li>
+				<li><a href="#">&nbsp中华菜系&nbsp</a>></li>
+				<li>&nbsp醋溜卷心菜</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_up">
+			<div class="m_up_left"><img src="../img/juanxincai/1.jpg" alt="1111"></div>
+			<div class="m_up_right">
+				<ul>
+					<li><i class="iconfont iconfont1">&#xe669;</i> 让做饭成为一种艺术</li>
+					<li><i class="iconfont iconfont2">&#xe65e;</i> 醋溜卷心菜</li>
+					<li><i class="iconfont iconfont3">&#xe619;</i> 工艺：&nbsp&nbsp炒</li>
+					<li><i class="iconfont iconfont4">&#xe638;</i> 口味：&nbsp&nbsp酸辣味</li>
+					<li><i class="iconfont iconfont5">&#xe6c0;</i> 烹饪时间：<15分钟</li>
+					<li><i class="iconfont iconfont6">&#xe611;</i> 酸酸辣辣吃出个天下。</li>
+				</ul>
+				<div class="m_up_right_p"><p>醋溜卷心菜</p></div>
+				<div class="m_up_right_c">
+					<button class="btn btn-default btn1" type="submit">简介</button>
+					<button class="btn btn-default btn2" type="submit">用料</button>
+					<ul>
+						<li class="li1">
+							<p>卷心菜，又名球甘蓝，别称圆白菜或洋白菜，还叫莲花白，属于甘蓝的变种，我国各地都有栽培。卷心菜口味清香、脆嫩，四季都能吃到，是主要的蔬菜品种之一。近年，西方一些国家的学者们发现，它在抗衰老和防止心脑血管疾病、癌症等方面显现了奇异功效。~~</p>
+							<p></p>
+						</li>
+						<li class="li2">
+							<p>配料:500克醋；50克;葱花；5克;蒜片；3克;花椒；10粒;白糖；15克;酱油；10克;湿淀粉；15克;姜末；3克;干辣椒；6克;花生油；70克;细盐；10克;香油；5克。老干妈；适量;老抽：适量;</p>
+						</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<button type="button" class="btn btn-primary btn-lg active">收 藏</button>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="m_c_up">
+				<h3>做法：</h3>
+			</div>
+			<ol>
+				<li>卷心菜菜削块儿洗净沥干备用</li>
+				<li>葱切花，蒜切末，辣椒切段，肉切薄片备用。</li>
+				<li>锅入油烧至微热<img src="../img/juanxincai/2.jpg" alt=""></li>
+				<li>火调小，葱蒜辣椒入锅翻几下<img src="../img/juanxincai/3.jpg" alt=""></li>
+				<li>加入肉片翻炒几下（如果喜欢吃比较焦一点肉丁，可以油热后先炒肉，再放葱蒜辣椒。<img src="../img/juanxincai/4.jpg" alt=""></li>
+				<li>加入老抽和老干妈，卷心菜入锅大火翻炒，翻炒匀翻炒至菜叶变软，盖上锅盖小焖一会儿，约十几秒<img src="../img/juanxincai/6.jpg" alt=""></li>
+				<li>加入盐、糖、五香粉,根据个人口味调入适量醋,翻炒几下尝尝咸淡再出锅<img src="../img/juanxincai/7.jpg" alt=""></li>
+				</li>
+				<img src="../img/juanxincai/8.jpg" alt="">
+			</ol>
+			<div class="m_c_down">
+				<h3>烹饪技巧：</h3>
+			</div>
+			<div class="m_c_last">
+				<ul>
+					<li>这道菜步骤多，做的时候提前准备好材料避免手脚慌乱。焖菜的时候注意不要烧干了，一般洗过的卷心菜最后都会出些水分，不用额外加水。</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="comment_inner">
+			<form action="" class="c_text">
+				<h4>游客评论：</h4>
+				<textarea class="form-control control1" rows="5"></textarea>
+				<button type="button" class="btn btn-info">发表评论</button>
+			</form>
+			<div class="box2"></div>
+			<ul class="c_list">
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

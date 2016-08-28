@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微波炉广式肠粉</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/mizhipaigu.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//iconfont划过大小
+		$(".m_up_right>ul>li").hover(function(){
+			$(this).find(".iconfont").css("font-size","35px")
+		},function(){
+			$(this).find(".iconfont").css("font-size","31px")
+		});
+		//简介原料
+		$(".btn2").click(function(){
+			$(this).parent().find(".li1").hide().siblings().show()
+		});
+		$(".btn1").click(function(){
+			$(this).parent().find(".li2").hide().siblings().show()
+		});
+		$(".btn-primary").click(function(){
+			alert("收藏成功！")
+		});
+		$("body").on("click",".btn-info",function(){
+			var v = $(this).prev().val();
+			var it = $("<li>" +v+"<a class='del'>删除</a></li>");
+			$(".c_list").append(it);
+	        $(".del").click(function(){
+            $(this).parent().remove();
+		})
+		});
+	})
+
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="../html/login.html" >用户登录</a></li>
+		    		<li><a href="../html/zhuce.html" >用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp首页&nbsp</a>></li>
+				<li><a href="#">&nbsp中华菜系&nbsp</a>></li>
+				<li>&nbsp微波炉广式肠粉</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_up">
+			<div class="m_up_left"><img src="../img/changfen/0.jpg" alt="1111"></div>
+			<div class="m_up_right">
+				<ul>
+					<li><i class="iconfont iconfont1">&#xe669;</i> 让做饭成为一种艺术</li>
+					<li><i class="iconfont iconfont2">&#xe65e;</i> 微波炉广式肠粉</li>
+					<li><i class="iconfont iconfont3">&#xe619;</i> 工艺：&nbsp&nbsp微波</li>
+					<li><i class="iconfont iconfont4">&#xe638;</i> 口味：&nbsp&nbsp家常味</li>
+					<li><i class="iconfont iconfont5">&#xe6c0;</i> 烹饪时间：<15分钟</li>
+					<li><i class="iconfont iconfont6">&#xe611;</i> 不是肠，不是粉，你到底是何方妖孽</li>
+				</ul>
+				<div class="m_up_right_p"><p>微波炉广式肠粉</p></div>
+				<div class="m_up_right_c">
+					<button class="btn btn-default btn1" type="submit">简介</button>
+					<button class="btn btn-default btn2" type="submit">用料</button>
+					<ul>
+						<li class="li1">
+							<p> 身为广东人，我从小就喜欢吃拉肠，我曾经考虑过买蒸拉肠的拉肠机，家人强烈反对，只能放弃。有次在公交车上看到公交播放的视频，用微波炉制作拉肠，看着真的太简单太方便了。可是视频没有配方，我上网搜了很多配方，每一个配方都试了一次，图片里是我感觉挺好的配方。</p>
+							<p>
+</p>
+						</li>
+						<li class="li2">
+							<p>粘米粉 80克   澄粉 40克   玉米淀粉 20克   盐 1克   水 380ml   虾米20克   香葱粒 适量   米酒 几滴   食用油 20ml</p>
+						</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<button type="button" class="btn btn-primary btn-lg active">收 藏</button>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="m_c_up">
+				<h3>做法：</h3>
+			</div>
+			<ol>
+				<li>准备所有材料：虾米洗净切小粒，香葱洗净切葱粒<img src="../img/changfen/1.jpg" alt=""></li>
+				<li>把粘米粉、澄粉、玉米淀粉和水一起搅拌均匀<img src="../img/changfen/2.jpg" alt=""></li>
+				<li>
+虾米粒滴入几滴米酒和食用油，拌匀<img src="../img/changfen/3.jpg" alt=""></li>
+				<li>把虾米粒放进微波炉，在上方遮一层扎了孔的保鲜膜，或盖上盖子留出缝隙，用高火加热1分钟<img src="../img/changfen/4.jpg" alt=""></li>
+				<li>加热好的虾米喷香，撒入米酒不会有腥味<img src="../img/changfen/5.jpg" alt=""></li>
+
+				<li>在微波炉盒子里，扫一层油，再把约50毫升的粉浆和虾米粒、葱花<img src="../img/changfen/6.jpg" alt=""></li>
+				<li>将盖子盖在微波炉专用盒子上，留出缝隙不要盖牢，然后把粉浆放进微波炉里<img src="../img/changfen/7.jpg" alt=""></li>
+				<li>按下微波炉的功能键“火力100”，时间1分钟<img src="../img/changfen/8.jpg" alt=""></li>
+				<li>从微波炉取出拉肠，用小勺子和筷子将肠粉卷起来<img src="../img/changfen/9.jpg" alt=""></li>
+				<li>
+                 10多分钟就能做好一盘拉肠，然后淋上拉肠酱油<img src="../img/changfen/10.jpg" alt="">
+				</li>
+				<img src="../img/changfen/11.jpg" alt="">
+				</li>
+			</ol>
+			<div class="m_c_down">
+				<h3>烹饪技巧：</h3>
+			</div>
+			<div class="m_c_last">
+				<ul>
+					<li>1 图片里的微波炉盒子是塑料的，比较薄，用时短，如果用厚的微波炉盒子时间要长些
+
+</li>
+					<li>2 粉浆要薄薄地铺在微波炉盒子里，不要太厚了，厚了不好卷，而且厚了不够滑</li>
+					<li>3 家庭里制作拉肠酱油，把姜葱爆香，加入适量水、蚝油、生抽和少许老抽，用小火煮开即可。</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="comment_inner">
+			<form action="" class="c_text">
+				<h4>游客评论：</h4>
+				<textarea class="form-control control1" rows="5"></textarea>
+				<button type="button" class="btn btn-info">发表评论</button>
+			</form>
+			<div class="box2"></div>
+			<ul class="c_list">
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>香蒜蜜汁排骨</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/mizhipaigu.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//iconfont划过大小
+		$(".m_up_right>ul>li").hover(function(){
+			$(this).find(".iconfont").css("font-size","35px")
+		},function(){
+			$(this).find(".iconfont").css("font-size","31px")
+		});
+		//简介原料
+		$(".btn2").click(function(){
+			$(this).parent().find(".li1").hide().siblings().show()
+		});
+		$(".btn1").click(function(){
+			$(this).parent().find(".li2").hide().siblings().show()
+		});
+		$(".btn-primary").click(function(){
+			alert("收藏成功！")
+		});
+		//添加评论
+		$("body").on("click",".btn-info",function(){
+			var v = $(this).prev().val();
+			var it = $("<li>" +v+"<a class='del'>删除</a></li>");
+			$(".c_list").append(it);
+	        $(".del").click(function(){
+            $(this).parent().remove();
+		})
+		});
+
+	})
+
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="../html/login.html" >用户登录</a></li>
+		    		<li><a href="../html/zhuce.html" >用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp首页&nbsp</a>></li>
+				<li><a href="#">&nbsp中华菜系&nbsp</a>></li>
+				<li>&nbsp香蒜蜜汁排骨</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_up">
+			<div class="m_up_left"><img src="../img/s40.jpg" alt="1111"></div>
+			<div class="m_up_right">
+				<ul>
+					<li><i class="iconfont iconfont1">&#xe669;</i> 让做饭成为一种艺术</li>
+					<li><i class="iconfont iconfont2">&#xe65e;</i> 香蒜蜜汁排骨</li>
+					<li><i class="iconfont iconfont3">&#xe619;</i> 工艺：&nbsp&nbsp烧</li>
+					<li><i class="iconfont iconfont4">&#xe638;</i> 口味：&nbsp&nbsp蒜香味</li>
+					<li><i class="iconfont iconfont5">&#xe6c0;</i> 烹饪时间：<30分钟</li>
+					<li><i class="iconfont iconfont6">&#xe611;</i> 来自排骨君的诱惑</li>
+				</ul>
+				<div class="m_up_right_p"><p>香蒜蜜汁排骨</p></div>
+				<div class="m_up_right_c">
+					<button class="btn btn-default btn1" type="submit">简介</button>
+					<button class="btn btn-default btn2" type="submit">用料</button>
+					<ul>
+						<li class="li1">
+							<p>整理橱柜，发现半瓶日式味啉，似乎快要过期的样子。正好刚刚得了一个食谱，正好味啉是主要调料——就是这道口味独特的香蒜蜜汁排骨。俗话说得好，吃肉不吃蒜，营养减一半！ 瘦肉中富含的维生素B，与大蒜同食才更容易吸收利用。这道排骨，炸到外酥里嫩，再融合了蒜香浓郁的香蒜油，点缀上口感酥脆的香蒜酥，不仅口味独特，而且香甜酥糯，吮指留香！</p>
+							<p>蜜汁的味道主要来自味啉。 味啉其实就是甜料酒，如果没有也不必专门去买，用我们普通的料酒或米酒，适量加些白糖就是了。替代品虽然味道不够正宗，但只要好吃也未尝不可，—这是不断囤积各种调料的人的经验之谈。</p>
+						</li>
+						<li class="li2">
+							<p>排骨：350克；生抽：1大勺；盐：少许；鸡蛋：半个；地瓜粉：1大勺；味霖：1碗；大蒜：5瓣；料酒：1大勺；五香粉：1小勺；食用油：适量；老抽：1大勺；清水：半碗；白芝麻：适量；</p>
+						</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<button type="button" class="btn btn-primary btn-lg active">收 藏</button>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="m_c_up">
+				<h3>做法：</h3>
+			</div>
+			<ol>
+				<li>排骨洗净沥干水分，加入生抽、料酒、盐、五香粉和半个全蛋液抓匀，再加入地瓜淀粉抓匀至粘稠，腌制30分钟</li>
+				<li>大蒜切成粗粒备用（不要太碎，否则容易炸糊）<img src="../img/img1/1.jpg" alt=""></li>
+				<li>味啉和清水一起放进小碗，搅拌均匀备用</li>
+				<li>起炒锅，热锅入凉油2大勺，小火下入大蒜粒，慢慢煸炒至蒜粒颜色金黄、蒜香浓郁，连油一起盛出，这就是香蒜酥<img src="../img/img1/2.jpg" alt=""></li>
+				<li>另起炸锅，下入适量食用油，五六成热时下入排骨，炸至熟透捞出；再升高油温至微微冒烟，下入排骨复炸，迅速炸至金黄色捞出沥油</li>
+				<li>另起锅，锅中加入味啉和水，大火煮开熬至微微粘稠<img src="../img/img1/3.jpg" alt=""></li>
+				<li>下入炸过的排骨，大火翻炒</li>
+				<li>翻炒期间，加入少许老抽，翻炒至上色<img src="../img/img1/4.jpg" alt=""></li>
+				<li>汤汁即将收干时，下入1大勺香蒜酥（连油带蒜）</li>
+				<li>翻炒均匀，起锅即可！装盘后可再撒适量熟白芝麻点缀提味儿<img src="../img/img1/5.jpg" alt="">
+				</li>
+				<img src="../img/img1/6.jpg" alt="">
+				<img src="../img/img1/7.jpg" alt="">
+				<img src="../img/img1/8.jpg" alt="">
+			</ol>
+			<div class="m_c_down">
+				<h3>烹饪技巧：</h3>
+			</div>
+			<div class="m_c_last">
+				<ul>
+					<li>1、排骨炸两遍，第一遍中温炸，炸熟，第二遍高温炸，炸酥，还能逼出大部分油脂；</li>
+					<li>2、香蒜酥可能一次用不完，如果不想保存可以盛出蒜粒和部分油脂，剩余和油脂和炸油一起用来炸排骨就是；</li>
+					<li>3、没有味啉，可以用米酒或料酒加适量白糖代替，尝尝有微微的甜味即可。</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="comment_inner">
+			<form action="" class="c_text">
+				<h4>游客评论：</h4>
+				<textarea class="form-control control1" rows="5"></textarea>
+				<button type="button" class="btn btn-info">发表评论</button>
+			</form>
+			<div class="box2"></div>
+			<ul class="c_list">
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

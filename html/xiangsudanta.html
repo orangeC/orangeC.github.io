@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>香酥蛋挞</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/mizhipaigu.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//iconfont划过大小
+		$(".m_up_right>ul>li").hover(function(){
+			$(this).find(".iconfont").css("font-size","35px")
+		},function(){
+			$(this).find(".iconfont").css("font-size","31px")
+		});
+		//简介原料
+		$(".btn2").click(function(){
+			$(this).parent().find(".li1").hide().siblings().show()
+		});
+		$(".btn1").click(function(){
+			$(this).parent().find(".li2").hide().siblings().show()
+		});
+		$(".btn-primary").click(function(){
+			alert("收藏成功！")
+		});
+		//添加评论
+		$("body").on("click",".btn-info",function(){
+			var v = $(this).prev().val();
+			var it = $("<li>" +v+"<a class='del'>删除</a></li>");
+			$(".c_list").append(it);
+	        $(".del").click(function(){
+            $(this).parent().remove();
+		})
+		});
+	})
+
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="../html/login.html" >用户登录</a></li>
+		    		<li><a href="../html/zhuce.html" >用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp首页&nbsp</a>></li>
+				<li><a href="#">&nbsp烘焙&nbsp</a>></li>
+				<li>&nbsp香酥蛋挞</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_up">
+			<div class="m_up_left"><img src="../img/xiangsudanta/8.jpg" alt="1111"></div>
+			<div class="m_up_right">
+				<ul>
+					<li><i class="iconfont iconfont1">&#xe669;</i> 精巧可爱的点心</li>
+					<li><i class="iconfont iconfont2">&#xe65e;</i> 香酥蛋挞</li>
+					<li><i class="iconfont iconfont3">&#xe619;</i> 工艺：&nbsp&nbsp烤</li>
+					<li><i class="iconfont iconfont4">&#xe638;</i> 口味：&nbsp&nbsp甜味</li>
+					<li><i class="iconfont iconfont5">&#xe6c0;</i> 烹饪时间：<30分钟</li>
+					<li><i class="iconfont iconfont6">&#xe611;</i> 外皮松酥肉馅滑嫩 </li>
+				</ul>
+				<div class="m_up_right_p"><p>香酥蛋挞</p></div>
+				<div class="m_up_right_c">
+					<button class="btn btn-default btn1" type="submit">简介</button>
+					<button class="btn btn-default btn2" type="submit">用料</button>
+					<ul>
+						<li class="li1">
+							<p>大家国庆过的怎么样呢？是出去游玩参观，还是回家与亲人团聚。昨天刚从老家回来，从网上买的蛋挞模具也回来了，所以迫不及待的就做了蛋挞。第一次做，蛋挞皮和蛋挞液都是自己弄得，也不知道能不能成功，反正试试看。头一天晚上和好蛋挞皮，第二天调好蛋挞液，放到烤箱中，稍等片刻，“叮”的一声，蛋挞就制作好了。d=====(￣▽￣*)b</p>
+							<p>一直就很喜欢吃酥皮的点心，但是因为酥皮制作起来太麻烦，好久没做过了，这几天玩心大发，把君之的博客翻出来里面的点心挨个玩过去，这次的酥皮，严格按照步骤进行，所有非常的成功，整个过程丝毫都没出油呢！成品出来非常的好吃，外面卖的真的没法比！</p>
+						</li>
+						<li class="li2">
+							<p>低筋面粉：120克，高筋面粉:70克</p>
+							<p>黄油：60克，食盐：2克</p>
+							<p>蔓越莓干：7颗，紫薯：10克</p>
+							<p>鸡蛋黄：1个牛奶：20克，白砂糖：10克</p>
+						</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<button type="button" class="btn btn-primary btn-lg active">收 藏</button>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="m_c_up">
+				<h3>做法：</h3>
+			</div>
+			<ol>
+				<li>介绍一下蛋挞皮的做法：
+                 先准备10g的黄油，室温软化，放入110g低筋面粉和高筋面粉，2g的食盐，加入清水，慢慢的和成面团。和好的面团放入冰箱中冷藏松弛1小时左右<img src="../img/xiangsudanta/1.jpg" alt=""></li>
+				<li>剩下的50g黄油放入油纸或者保鲜袋中，室温软化，用擀面杖擀成黄油片，放入冰箱冷藏20分钟左右。
+                松弛好的面团拿出来，擀大，把黄油放到面团上，收口，用擀面杖在收口处用力敲几下。用均匀的力量擀开面团，擀成长方形。像叠被子一样叠起面片，放入冰箱冷藏20分钟<img src="../img/xiangsudanta/2.jpg" alt=""></li>
+				<li>同样，冷藏好的面团拿出来后，擀成长方形，继续像叠被子一样折三折，然后放入冰箱冷藏20分钟。这一步大概需要重复5~6次，而且每做好一次都要放入冰箱冷藏面团20分钟。
+                最后做好的面团，擀成长方形后卷起来，切成6个大小均匀的小剂子，然后捏成原片放到模具中。如果不着急用的话，就放到冰箱中冷藏起来。用的时候解冻就可以了<img src="../img/xiangsudanta/3.jpg" alt=""></li></li>
+				<li>介绍蛋挞液的做法：
+                鸡蛋打入碗中，蛋黄蛋清分离，搅散蛋黄。放入白砂糖、牛奶、筛入15g的低筋面粉，搅拌均匀以后，过滤蛋挞液<img src="../img/xiangsudanta/4.jpg" alt=""></li>
+				<li>拿出来做好的蛋挞皮，放入紫薯粒、蔓越莓干，放入蛋挞液至7~8分满。
+                预热烤箱，放入蛋挞，上下火，中层，200度，20分钟即可。
+                表面上色满意后，可加盖锡纸<img src="../img/xiangsudanta/5.jpg" alt=""></li>
+				<li>烤好以后自然放凉<img src="../img/xiangsudanta/7.jpg" alt=""></li>
+				<img src="../img/xiangsudanta/6.jpg" alt="">
+			    </ol>
+			<div class="m_c_down">
+				<h3>烹饪技巧：</h3>
+			</div>
+			<div class="m_c_last">
+				<ul>
+					<li>1.做蛋挞皮的时候一定要擀一次面团，冷藏20分钟，不然黄油会随着室温而软化流出来，非常不好操作。</li>
+                    <li>2.烤箱的温度一定要根据自家的实际情况来调节。</li>
+                    <li>3.我这款蛋挞液是没有淡奶油的，因为家里面的淡奶油刚好用完了，索性就不用了，我吃了一个，觉得对口感没有太大的影响。大家根据情况来定哈</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="comment_inner">
+			<form action="" class="c_text">
+				<h4>游客评论：</h4>
+				<textarea class="form-control control1" rows="5"></textarea>
+				<button type="button" class="btn btn-info">发表评论</button>
+			</form>
+			<div class="box2"></div>
+			<ul class="c_list">
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

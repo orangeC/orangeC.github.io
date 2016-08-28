@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鸡翅包饭</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/mizhipaigu.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//iconfont划过大小
+		$(".m_up_right>ul>li").hover(function(){
+			$(this).find(".iconfont").css("font-size","35px")
+		},function(){
+			$(this).find(".iconfont").css("font-size","31px")
+		});
+		//简介原料
+		$(".btn2").click(function(){
+			$(this).parent().find(".li1").hide().siblings().show()
+		});
+		$(".btn1").click(function(){
+			$(this).parent().find(".li2").hide().siblings().show()
+		});
+		$(".btn-primary").click(function(){
+			alert("收藏成功！")
+		});
+		$("body").on("click",".btn-info",function(){
+			var v = $(this).prev().val();
+			var it = $("<li>" +v+"<a class='del'>删除</a></li>");
+			$(".c_list").append(it);
+	        $(".del").click(function(){
+            $(this).parent().remove();
+		})
+		});
+	})
+
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="../html/login.html" >用户登录</a></li>
+		    		<li><a href="../html/zhuce.html" >用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp首页&nbsp</a>></li>
+				<li><a href="#">&nbsp家常菜谱&nbsp</a>></li>
+				<li>&nbsp鸡翅包饭</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_up">
+			<div class="m_up_left"><img src="../img/jichibaofan/0.jpg" alt="1111"></div>
+			<div class="m_up_right">
+				<ul>
+					<li><i class="iconfont iconfont1">&#xe669;</i> 让做饭成为一种艺术</li>
+					<li><i class="iconfont iconfont2">&#xe65e;</i> 鸡翅包饭</li>
+					<li><i class="iconfont iconfont3">&#xe619;</i> 工艺：&nbsp&nbsp煎</li>
+					<li><i class="iconfont iconfont4">&#xe638;</i> 口味：&nbsp&nbsp咸鲜味</li>
+					<li><i class="iconfont iconfont5">&#xe6c0;</i> 烹饪时间：<15分钟</li>
+					<li><i class="iconfont iconfont6">&#xe611;</i> 快救救我，我要被你的口水淹没了</li>
+				</ul>
+				<div class="m_up_right_p"><p>鸡翅包饭</p></div>
+				<div class="m_up_right_c">
+					<button class="btn btn-default btn1" type="submit">简介</button>
+					<button class="btn btn-default btn2" type="submit">用料</button>
+					<ul>
+						<li class="li1">
+							<p> 吃过蛋包饭，吃过鸡翅包饭吗</p>
+							<p>鸡翅包饭，也叫翅包饭。听起来很像吃饱饭，当妈的对孩子不就这点小要求吗？这道料理不仅能吃饱饭，还能吃好饭！有饭有肉有蔬菜，配上一杯果汁，爽翻天了！
+
+
+
+这是某天给儿子准备的早饭，嗯，我们家的早饭是经常有肉的。因为孩子每天只有早餐才在家里吃，其余都是在学校食堂吃饭。所以我尽量每天早上给他准备早饭。鸡翅很少有小孩不爱吃吧？这道料理给鸡翅去了骨，还塞入了营养全面的炒饭，一口咬下去，很有满足感哈！</p>
+						</li>
+						<li class="li2">
+							<p>鸡翅中 5个、米饭1碗、洋葱半个、鸡蛋1个、
+调料：食盐1/2茶匙、酱油2汤匙、葱1段、蒜2瓣、料酒2汤匙、白胡椒粉1/2茶匙、蜂蜜2汤匙、植物油2汤匙</p>
+						</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<button type="button" class="btn btn-primary btn-lg active">收 藏</button>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="m_c_up">
+				<h3>做法：</h3>
+			</div>
+			<ol>
+				<li>准备一些鸡翅中，如果可以买到鸡全翅，可以用鸡全翅来做，切去翅根部分，保留翅中和翅尖，今天用翅中来做，需要给鸡翅中去骨。用刀沿着鸡翅骨头的地方画圈，再用刀锋把肉往下刮，用厨房剪刀操作会更方便<img src="../img/jichibaofan/1.jpg" alt=""></li>
+
+				<li>将所有鸡翅中的骨头都剔除掉，先放在一边备用<img src="../img/jichibaofan/2.jpg" alt=""></li>
+				<li>现在做炒饭，一小碗米饭，一些洋葱丁，一些蒜末，一些葱花，一颗鸡蛋<img src="../img/jichibaofan/3.jpg" alt=""></li>
+
+
+				<li>锅中倒一点植物油，先下入蒜末炒香，再打入一颗鸡蛋，炒散，使蛋液包裹住蒜末，再下洋葱丁炒香，然后倒入米饭，加盐、海鲜酱油、白胡椒粉，把所有材料炒匀，最后撒入葱花，炒匀后关火<img src="../img/jichibaofan/4.jpg" alt=""></li>
+				<li>把刚才去骨的鸡翅中拿过来，在每个翅中里填充进炒饭，不宜填的过满，以免一会加热的时候饭会跑出来。再调一碗酱汁，需要2汤匙海鲜酱油、2汤匙料酒、2汤匙蜂蜜、2汤匙清水、少许的白胡椒粉<img src="../img/jichibaofan/5.jpg" alt=""></li>
+
+
+				<li>把填满炒饭的翅中依次下入锅中，煎到表皮焦黄<img src="../img/jichibaofan/6.jpg" alt=""></li>
+				<li>这时倒入酱汁，小火慢慢炖煮，直到酱汁收干<img src="../img/jichibaofan/7.jpg" alt=""></li>
+
+
+<img src="../img/jichibaofan/8.jpg" alt=""></li>
+				
+			</ol>
+			<div class="m_c_down">
+				<h3>烹饪技巧：</h3>
+			</div>
+			<div class="m_c_last">
+				<ul>
+					<li>1.鸡翅要选表皮完好，尽量大个一些的
+<li>2.鸡翅提前腌渍入味比较好</li>
+
+<li>3.炒饭别弄咸了</li>
+
+</li>
+					<li>
+4.剔骨时要小心，有点考验耐心</li>
+					<li>5.米饭不要塞入太多，小心烤制途中会撑爆</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="comment_inner">
+			<form action="" class="c_text">
+				<h4>游客评论：</h4>
+				<textarea class="form-control control1" rows="5"></textarea>
+				<button type="button" class="btn btn-info">发表评论</button>
+			</form>
+			<div class="box2"></div>
+			<ul class="c_list">
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

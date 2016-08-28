@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>改良版上校鸡块</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/mizhipaigu.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//iconfont划过大小
+		$(".m_up_right>ul>li").hover(function(){
+			$(this).find(".iconfont").css("font-size","35px")
+		},function(){
+			$(this).find(".iconfont").css("font-size","31px")
+		});
+		//简介原料
+		$(".btn2").click(function(){
+			$(this).parent().find(".li1").hide().siblings().show()
+		});
+		$(".btn1").click(function(){
+			$(this).parent().find(".li2").hide().siblings().show()
+		});
+		$(".btn-primary").click(function(){
+			alert("收藏成功！")
+		});
+		//添加评论
+		$("body").on("click",".btn-info",function(){
+			var v = $(this).prev().val();
+			var it = $("<li>" +v+"<a class='del'>删除</a></li>");
+			$(".c_list").append(it);
+	        $(".del").click(function(){
+            $(this).parent().remove();
+		})
+		});
+	})
+
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="../html/login.html" >用户登录</a></li>
+		    		<li><a href="../html/zhuce.html" >用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp首页&nbsp</a>></li>
+				<li><a href="#">&nbsp外国菜系&nbsp</a>></li>
+				<li>&nbsp改良版上校鸡块</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_up">
+			<div class="m_up_left"><img src="../img/shangxiaojikuai/1.jpg" alt="1111"></div>
+			<div class="m_up_right">
+				<ul>
+					<li><i class="iconfont iconfont1">&#xe669;</i> 让做饭成为一种艺术</li>
+					<li><i class="iconfont iconfont2">&#xe65e;</i> 改良版上校鸡块</li>
+					<li><i class="iconfont iconfont3">&#xe619;</i> 工艺：&nbsp&nbsp炸</li>
+					<li><i class="iconfont iconfont4">&#xe638;</i> 口味：&nbsp&nbsp酸甜味</li>
+					<li><i class="iconfont iconfont5">&#xe6c0;</i> 烹饪时间：<15分钟</li>
+					<li><i class="iconfont iconfont6">&#xe611;</i> 享受不一样的鸡肉。</li>
+				</ul>
+				<div class="m_up_right_p"><p>改良版上校鸡块</p></div>
+				<div class="m_up_right_c">
+					<button class="btn btn-default btn1" type="submit">简介</button>
+					<button class="btn btn-default btn2" type="submit">用料</button>
+					<ul>
+						<li class="li1">
+							<p>肯德基是世界最大的炸鸡餐厅连锁企业，肯德基的标记kfc是英文Kentucky Fried Chicken （肯德基炸鸡）的缩写，它已在全球范围内成为有口皆碑的著名品牌。所谓上校鸡块是肯德基的代言人的绰号！
+								</p>
+							<p>上校最著名的拿手菜, 就是他精心研制发明的炸鸡。这是肯德基现今最受欢迎的产品，它是由上校在经历十年的钻研后，用调和出的神奇十一种香料配方烹制而成,令人人品尝后吮指回味。上校鸡块其实真的不错，对于减肥的人也是一种选择，我们可以看着电视，喝着清茶，吃着鸡块，着也是一种享受。</p>
+						</li>
+						<li class="li2">
+							<p>鸡脯胸肉：1块;青豆：30克;玉米；30克;鸡蛋：3个;胡萝卜；1/2根;面包糠：适量;食盐：1茶匙;黑胡椒：少许;橄榄油：1汤匙;植物油：适量;</p>
+						</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<button type="button" class="btn btn-primary btn-lg active">收 藏</button>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="m_c_up">
+				<h3>做法：</h3>
+			</div>
+			<ol>
+				<li>鸡胸肉切碎剁成馅料，加姜泥，一起剁均匀<img src="../img/shangxiaojikuai/2.jpg" alt=""></li>
+				<li>青豆玉米胡萝卜丁和鸡胸肉，盐，两个蛋的蛋清（蛋黄留着备用），黑胡椒，橄榄油，一起搅拌均匀<img src="../img/shangxiaojikuai/3.jpg" alt=""></li>
+				<li>方形容器里铺上一层保鲜膜，方便到时候扣出来。把肉泥铺上面，不要太厚<img src="../img/shangxiaojikuai/4.jpg" alt=""></li>
+				<li>放进冰箱冻四个小时以上，用手摁着肉摁不动就可以，拿出来很容易，提着保鲜膜就出来了<img src="../img/shangxiaojikuai/5.jpg" alt=""></li>
+				<li>用刀把冻好的鸡胸肉切块<img src="../img/shangxiaojikuai/6.jpg" alt=""></li>
+				<li>用掉蛋清剩下的蛋黄，加一个整鸡蛋打散，鸡肉块放进去沾均匀蛋液<img src="../img/shangxiaojikuai/7.jpg" alt=""></li>
+				<li>沾一层面包渣。做成生坯，要是喜欢外面很厚的，就重复沾一层蛋液一层面包糠<img src="../img/shangxiaojikuai/8.jpg" alt=""></li>
+				<li>锅里烧油，油四五成热就放进去，中火炸微黄，捞出来再炸一次<img src="../img/shangxiaojikuai/9.jpg" alt=""></li>
+				<li>炸好的鸡块，趁热沾番茄酱吃<img src="../img/shangxiaojikuai/9.jpg" alt=""></li>
+				</li>
+				<img src="../img/shangxiaojikuai/1.jpg" alt="">
+			</ol>
+			<div class="m_c_down">
+				<h3>烹饪技巧：</h3>
+			</div>
+			<div class="m_c_last">
+				<ul>
+					<li>1、使用烤盘时，烤盘一定要没有水在刷油;</li>
+					<li>2、这是一款少油的食品，对于减肥的人可以放心大胆的吃;</li>
+					<li>3、在鸡块上沾油的时候最好用手指，每个一两滴就好不用很多。</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="comment_inner">
+			<form action="" class="c_text">
+				<h4>游客评论：</h4>
+				<textarea class="form-control control1" rows="5"></textarea>
+				<button type="button" class="btn btn-info">发表评论</button>
+			</form>
+			<div class="box2"></div>
+			<ul class="c_list">
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

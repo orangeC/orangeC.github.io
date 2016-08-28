@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>水晶虾饺</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/mizhipaigu.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//iconfont划过大小
+		$(".m_up_right>ul>li").hover(function(){
+			$(this).find(".iconfont").css("font-size","35px")
+		},function(){
+			$(this).find(".iconfont").css("font-size","31px")
+		});
+		//简介原料
+		$(".btn2").click(function(){
+			$(this).parent().find(".li1").hide().siblings().show()
+		});
+		$(".btn1").click(function(){
+			$(this).parent().find(".li2").hide().siblings().show()
+		});
+		$(".btn-primary").click(function(){
+			alert("收藏成功！")
+		});
+		//添加评论
+		$("body").on("click",".btn-info",function(){
+			var v = $(this).prev().val();
+			var it = $("<li>" +v+"<a class='del'>删除</a></li>");
+			$(".c_list").append(it);
+	        $(".del").click(function(){
+            $(this).parent().remove();
+		})
+		});
+	})
+
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="../html/login.html" >用户登录</a></li>
+		    		<li><a href="../html/zhuce.html" >用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp首页&nbsp</a>></li>
+				<li><a href="#">&nbsp中华菜系&nbsp</a>></li>
+				<li>&nbsp水晶虾饺</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_up">
+			<div class="m_up_left"><img src="../img/xiajiao/0.jpg" alt="1111"></div>
+			<div class="m_up_right">
+				<ul>
+					<li><i class="iconfont iconfont1">&#xe669;</i> 让做饭成为一种艺术</li>
+					<li><i class="iconfont iconfont2">&#xe65e;</i> 水晶虾饺</li>
+					<li><i class="iconfont iconfont3">&#xe619;</i> 工艺：&nbsp&nbsp蒸</li>
+					<li><i class="iconfont iconfont4">&#xe638;</i> 口味：&nbsp&nbsp咸鲜味</li>
+					<li><i class="iconfont iconfont5">&#xe6c0;</i> 烹饪时间：<15分钟</li>
+					<li><i class="iconfont iconfont6">&#xe611;</i> 吹弹可破的诱惑</li>
+				</ul>
+				<div class="m_up_right_p"><p>水晶虾饺</p></div>
+				<div class="m_up_right_c">
+					<button class="btn btn-default btn1" type="submit">简介</button>
+					<button class="btn btn-default btn2" type="submit">用料</button>
+					<ul>
+						<li class="li1">
+							<p>虾饺是广东地区汉族传统名点，广东省茶楼、酒家的传统小吃。广东人饮茶，少不了来一笼虾饺。上乘的虾饺，皮白如雪，薄如纸，半透明，内馅隐约可见，吃起来爽滑清鲜，美味诱人。</p>
+							<p>虾饺是广东具代表性的点心，以一层澄面皮包着一至两只虾为主馅，份量大小多以一口为限。传统的虾饺是半月形、蜘蛛肚共有十二褶的，馅料有虾，有肉，有笋，现在流行的是独虾虾饺。优质美味的虾饺一定要皮薄而软，如果饺皮是半透明则更佳;虾要爽口弹牙，饺内有少量汁液，全只饺要够热则为最佳。</p>
+						</li>
+						<li class="li2">
+							<p>虾400克 澄粉120克 生粉 50克 藕10克 猪肉（肥）50克 苏打粉 少许</p>
+						</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<button type="button" class="btn btn-primary btn-lg active">收 藏</button>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="m_c_up">
+				<h3>做法：</h3>
+			</div>
+			<ol>
+				<li>鲜虾买回后，剥去外皮，剔除虾线，然后将虾仁中加点小苏打抓拌均匀，再用水清洗干净控干水分<img src="../img/xiajiao/1.jpg" alt=""></li>
+				<li>然后一半切碎后剁成泥，另外一半切大块<img src="../img/xiajiao/2.jpg" alt=""></li>
+				<li>肥肉和藕都切成碎末，然后加入到虾肉中</li>
+				<li>将馅中加入盐、糖、胡椒粉、味精、鱼露和香油<img src="../img/xiajiao/3.jpg" alt=""></li>
+				<li>所有馅料搅拌均匀</li>
+				<li>用粽子叶或荷叶泡软，垫入蒸笼<img src="../img/xiajiao/4.jpg" alt=""></li>
+				<li>将面皮的材料混合<img src="../img/xiajiao/5.jpg" alt=""></li>
+				<li>和成柔软的面团<img src="../img/xiajiao/6.jpg" alt=""></li>
+				<li>搓成长条，再揪成小剂子，将小剂子擀成薄片	<img src="../img/xiajiao/7.jpg" alt=""></li>
+				<li>中间放入馅料，再放一个大块的虾肉，将边缘捏紧成饺子形状儿<img src="../img/xiajiao/8.jpg" alt="">
+				</li>
+				<li>包好的饺子放入蒸笼，上锅蒸10分钟左右即可<img src="../img/xiajiao/9.jpg" alt=""></li>
+				
+			<img src="../img/xiajiao/11.jpg" alt="">
+				<img src="../img/xiajiao/10.jpg" alt="">
+			</ol>
+			<div class="m_c_down">
+				<h3>烹饪技巧：</h3>
+			</div>
+			<div class="m_c_last">
+				<ul>
+					<li>1、洗虾仁时加点小苏打可以去除虾仁表面的粘液，也有去腥解腻的作用，处理后的虾仁更透亮也更有弹性；
+
+</li>
+					<li>2、馅料中加入肥肉可以使虾肉更滋润，加入藕丁或者是荸荠等可以增加脆的口感；</li>
+					<li>3、虾饺的面团，澄面包出的皮很透亮，加入生粉可以使面团的粘性增加更好操作，这个面团要尽快用，否则会变干不好包，包的慢的话要将大部分面团放入保鲜袋保湿。</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="comment_inner">
+			<form action="" class="c_text">
+				<h4>游客评论：</h4>
+				<textarea class="form-control control1" rows="5"></textarea>
+				<button type="button" class="btn btn-info">发表评论</button>
+			</form>
+			<div class="box2"></div>
+			<ul class="c_list">
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

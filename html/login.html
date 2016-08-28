@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户登陆</title>
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$(".btn-success").click(function(){
+					
+					var a=$(".username").val();
+					var b=$(".password").val();
+					if(a==""){
+						alert("用户名不能为空").css("color","red");
+					}else if(b==""){
+						alert("密码不能为空").css("color","red");
+					}
+				})
+	})
+
+	</script>
+</head>
+<body>
+	<div id="box">
+		<form action="">
+			<div class="login"><h2>用户登录</h2></div>
+			<div class="form-group has-success has-feedback"><p>账户</p>
+			<input type="username" class="username form-control" placeholder="请输入账号">	
+			</div>
+			<div class="form-group has-error"><p>密码</p>
+			<input type="password" class="password form-control" placeholder="请输入密码">
+			</div>
+			<button type="button" class="btn btn-success">提交</button>
+			<a href="zhuce.html"><button type="button" class="btn btn-info">注册</button></a>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url(../img/ss.jpg) no-repeat center center;
+}
+#box{
+	font-family: "微软雅黑";
+	width: 400px;
+	height: 400px;	
+	margin: 100px auto;
+	box-shadow: 2px 2px 5px #e1e1e3,-2px -2px 5px #e1e1e3;
+}
+.login{
+	background-color: #ccc;
+	width: 396px;
+	height: 100px;
+	float: left;
+}
+.login h2{
+	text-align: center;
+	line-height: 65px;
+}
+.form-group{
+	width: 300px;
+	margin: 0 auto;
+}
+.form-group p{
+	font-size: 18px;
+	text-align: center;
+}
+.btn-success{
+	margin-top: 35px;
+	margin-left: 60px;
+	width: 100px;
+	height: 30px;
+}
+.btn-info{
+	margin-top: 35px;
+	margin-left: 60px;
+	width: 100px;
+	height: 30px;
+}

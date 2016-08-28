@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>外国菜系</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/jiachang.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//菜谱步骤信息上下滑动
+		$(".main_list>li").hover(function(){
+		$(this).find(".main_d_C").stop().animate({"margin-top":"-100px"},300)
+	},function(){
+		$(this).find(".main_d_C").stop().animate({"margin-top":"0px"},300)
+	});
+	})
+
+	</script>
+</head>
+<body>
+<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="login.html" target="_blank">用户登录</a></li>
+		    		<li><a href="zhuce.html" target="_blank">用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+</div>
+<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="jiachang.html">家常菜谱</a></li>
+					            <li><a href="zhonghua.html">中华菜系</a></li>
+					            <li><a href="waiguocaixi.html">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp菜谱分类&nbsp</a>></li>
+				<li><a href="#">&nbsp外国菜系&nbsp</a></li>
+			</ul>
+		</div>
+</div>
+<div id="main">
+    <div class="main_down">
+        <div class="main_d_up">
+		    <p>看着菜谱做洋餐，做国际美食达人</p>
+	    </div>
+			<div class="main_d_c">
+				<ul>
+					<li>
+						<div class="main_d_down">
+							<ul class="main_list">
+								<li><a href="#"><div class="main_d_img"><img src="../img/waiguocaixi/1.jpg" alt=""></div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">微波炉版烤年糕</p>
+										<p class="p2">0 评论 100 关注</p>
+										<p class="p3">大鱼吃小鱼</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">13步 /大概30分钟</p>
+										<p class="p5">微波 /其它口味</p>
+										<img class="img5" src="../img/aa.jpg" alt="">
+										<img class="img6" src="../img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+								<li class="main_l_li"><a href="#">
+									<div class="main_d_img">
+										<img src="../img/waiguocaixi/2.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">韩式泡菜刀削面</p>
+										<p class="p2">0 评论 100 关注</p>
+										<p class="p3">加菲喵</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">7步 /大概30分钟</p>
+										<p class="p5">煮 /其它口味</p>
+										<img class="img5" src="../img/aa.jpg" alt="">
+										<img class="img6" src="../img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+								<li class="main_l_li main_l_li1"><a href="#">
+									<div class="main_d_img">
+										<img src="../img/waiguocaixi/3.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">韩式冷面</p>
+										<p class="p2">0 评论 100 关注</p>
+										<p class="p3">小鱼吃虾米</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">10步 /大概10分钟</p>
+										<p class="p5">煮 /咸鲜味</p>
+										<img class="img5" src="../img/aa.jpg" alt="">
+										<img class="img6" src="../img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+								<li class="main_l_li main_l_li1"><a href="#">
+									<div class="main_d_img">
+										<img src="../img/waiguocaixi/4.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">韩式原味鸡排</p>
+										<p class="p2">0 评论 100 关注</p>
+										<p class="p3">大鱼吃小鱼</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">8步 /大概15分钟</p>
+										<p class="p5">炸 /家常味</p>
+										<img class="img5" src="../img/aa.jpg" alt="">
+										<img class="img6" src="../img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="main_d_li1">
+						<div class="main_d_down">
+							<ul class="main_list">
+								<li><a href="#">
+									<div class="main_d_img"><img src="../img/waiguocaixi/5.jpg" alt=""></div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">煮一锅韩式肥牛火锅</p>
+										<p class="p2">0 评论 100 关注</p>
+										<p class="p3">大脸喵</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">4步 /大概30分钟</p>
+										<p class="p5">煮 /酸辣味</p>
+										<img class="img5" src="../img/aa.jpg" alt="">
+										<img class="img6" src="../img/bb.jpg" alt="">
+									</div>
+								</div>
+								</a>
+							</li>
+								<li class="main_l_li"><a href="html/mizhipaigu.html" target="_blank">
+									<div class="main_d_img">
+										<img src="../img/waiguocaixi/6.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">韩式拌饭</p>
+										<p class="p2">0 评论 100 关注</p>
+										<p class="p3">狎昵</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">4步 /大概30分钟</p>
+										<p class="p5">拌 /香辣味</p>
+										<img class="img5" src="../img/aa.jpg" alt="">
+										<img class="img6" src="../img/bb.jpg" alt="">
+									</div>
+								</div>
+							</a></li>
+								<li class="main_l_li main_l_li1"><a href="#">
+									<div class="main_d_img">
+										<img src="../img/waiguocaixi/7.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">懒人版部队火锅</p>
+										<p class="p2">0 评论 10 关注</p>
+										<p class="p3">大鱼吃小鱼</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">6步 /大概15分钟</p>
+										<p class="p5">煮 /麻辣味</p>
+										<img class="img5" src="../img/aa.jpg" alt="">
+										<img class="img6" src="../img/bb.jpg" alt="">
+									</div>
+								</div>
+							</a></li>
+								<li class="main_l_li main_l_li1"><a href="#">
+									<div class="main_d_img">
+										<img src="../img/waiguocaixi/8.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">韩国部队火锅</p>
+										<p class="p2">0 评论 100 关注</p>
+										<p class="p3">小珊妹</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">7步 /大概30分钟</p>
+										<p class="p5">煮 /酸甜味</p>
+										<img class="img5" src="../img/aa.jpg" alt="">
+										<img class="img6" src="../img/bb.jpg" alt="">
+									</div>
+								</div>
+							</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="main_d_li2">
+						<div class="main_d_down">
+							<ul class="main_list">
+								<li><a href="#"><div class="main_d_img">
+									<img src="../img/waiguocaixi/9.jpg" alt=""></div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">最街头的韩国小吃辣炒年糕</p>
+										<p class="p2">0 评论 100 关注</p>
+										<p class="p3">加菲喵</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">4步 /大概15分钟</p>
+										<p class="p5">煮 /家常味</p>
+										<img class="img5" src="../img/aa.jpg" alt="">
+										<img class="img6" src="../img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+								<li class="main_l_li"><a href="#">
+									<div class="main_d_img">
+										<img src="../img/waiguocaixi/10.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">牛油果肉松寿司</p>
+										<p class="p2">0 评论 100 关注</p>
+										<p class="p3">扑通扑通</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">14步 /大概60分钟</p>
+										<p class="p5">其它工艺 /其它口味</p>
+										<img class="img5" src="../img/aa.jpg" alt="">
+										<img class="img6" src="../img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+								<li class="main_l_li main_l_li1"><a href="#">
+									<div class="main_d_img">
+										<img src="../img/waiguocaixi/11.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">黄致列同款韩式炒饭</p>
+										<p class="p2">0 评论 100 关注</p>
+										<p class="p3">顽皮猪</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">3步 /大概10分钟</p>
+										<p class="p5">炒 /酸甜味</p>
+										<img class="img5" src="../img/aa.jpg" alt="">
+										<img class="img6" src="../img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+								<li class="main_l_li main_l_li1"><a href="#">
+									<div class="main_d_img">
+										<img src="../img/waiguocaixi/12.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">紫菜包饭</p>
+										<p class="p2">0 评论 100 关注</p>
+										<p class="p3">加菲喵</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">7步 /大概60分钟</p>
+										<p class="p5">蒸 /家常味</p>
+										<img class="img5" src="../img/aa.jpg" alt="">
+										<img class="img6" src="../img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+    </div>
+</div>
+<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

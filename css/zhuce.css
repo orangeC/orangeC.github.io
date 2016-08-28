@@ -1,0 +1,120 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url(../img/ss.jpg) no-repeat center center;
+}
+#box{
+	font-family: "微软雅黑";
+	width: 800px;
+	height: 500px;	
+	margin: 100px auto;
+	background-color: #f5f6f3;
+	box-shadow: 5px 3px 15px #e1e1e3,-5px -5px 15px #e1e1e3;
+}
+.zhuce{
+	width: 300px;
+	height: 100px;
+	margin-left: 50px;
+}
+.zhuce h2{
+	font-size: 24px;
+	text-align: center;
+	line-height: 100px;
+}
+.box1{
+	width: 400px;
+	float: left;
+	margin-left: 50px;
+}
+.box1 p{
+	float: left;
+	font-size: 18px;
+	text-align: center;
+}
+.username{
+	margin-left: 90px;
+	float: left;
+	margin-top: -37px;
+}
+.box2{
+	width: 400px;
+	float: left;
+	margin-left: 50px;
+}
+.box2 p{
+	float: left;
+	font-size: 18px;
+	text-align: center;
+}
+.password{
+	margin-left: 90px;
+	float: left;
+	margin-top: -37px;
+}
+.sex{
+	width: 400px;
+	float: left;
+	margin-left: 50px;
+}
+.sex p{
+	float: left;
+	font-size: 18px;
+	text-align: center;
+}
+.sex span{
+	font-size: 18px;
+}
+.email{
+	margin-top: 10px;
+	width: 400px;
+	float: left;
+	margin-left: 50px;
+}
+.email p{
+	float: left;
+	font-size: 18px;
+	text-align: center;
+}
+.Email{
+	margin-left: 90px;
+	float: left;
+	margin-top: -37px;
+}
+.tel{
+	width: 400px;
+	float: left;
+	margin-left: 50px;
+}
+.tel p{
+	float: left;
+	font-size: 18px;
+	text-align: center;
+}
+.Tel{
+	margin-left: 90px;
+	float: left;
+	margin-top: -37px;
+}
+
+.Submit{
+	float: left;
+	width: 400px;
+	height: 100px;
+	margin-left: 50px;
+}
+.Reset{
+	float: left;
+	width: 300px;
+	height: 100px;
+	margin-left: -100px;
+}
+.btn-primary{
+	width: 180px;
+	height: 40px;
+}
+.btn-danger{
+	width: 180px;
+	height: 40px;
+}

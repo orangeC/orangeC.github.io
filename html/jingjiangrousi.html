@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京酱肉丝</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/mizhipaigu.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//iconfont划过大小
+		$(".m_up_right>ul>li").hover(function(){
+			$(this).find(".iconfont").css("font-size","35px")
+		},function(){
+			$(this).find(".iconfont").css("font-size","31px")
+		});
+		//简介原料
+		$(".btn2").click(function(){
+			$(this).parent().find(".li1").hide().siblings().show()
+		});
+		$(".btn1").click(function(){
+			$(this).parent().find(".li2").hide().siblings().show()
+		});
+		$(".btn-primary").click(function(){
+			alert("收藏成功！")
+		});
+		$("body").on("click",".btn-info",function(){
+			var v = $(this).prev().val();
+			var it = $("<li>" +v+"<a class='del'>删除</a></li>");
+			$(".c_list").append(it);
+	        $(".del").click(function(){
+            $(this).parent().remove();
+		})
+		});
+	})
+
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="../html/login.html" >用户登录</a></li>
+		    		<li><a href="../html/zhuce.html" >用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp首页&nbsp</a>></li>
+				<li><a href="#">&nbsp北京菜&nbsp</a>></li>
+				<li>&nbsp京酱肉丝</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_up">
+			<div class="m_up_left"><img src="../img/jingjiangrousi/8.jpg" alt="1111"></div>
+			<div class="m_up_right">
+				<ul>
+					<li><i class="iconfont iconfont1">&#xe669;</i> 滋阴调理补虚养身贫血调理</li>
+					<li><i class="iconfont iconfont2">&#xe65e;</i> 京酱肉丝</li>
+					<li><i class="iconfont iconfont3">&#xe619;</i> 工艺：&nbsp&nbsp炒</li>
+					<li><i class="iconfont iconfont4">&#xe638;</i> 口味：&nbsp&nbsp酱香味</li>
+					<li><i class="iconfont iconfont5">&#xe6c0;</i> 烹饪时间：<30分钟</li>
+					<li><i class="iconfont iconfont6">&#xe611;</i> 酱香浓郁风味独特</li>
+				</ul>
+				<div class="m_up_right_p"><p>京酱肉丝</p></div>
+				<div class="m_up_right_c">
+					<button class="btn btn-default btn1" type="submit">简介</button>
+					<button class="btn btn-default btn2" type="submit">用料</button>
+					<ul>
+						<li class="li1">
+							<p>京酱肉丝可以说是非常家常的一道京味菜，平时饭店一般都是大葱垫底的，我们家的人都很喜欢这个季节的黄瓜，嫩嫩的脆脆的，水分充足，味道清香鲜嫩，用来蘸酱是非常不错的伴餐小菜，所以，我做京酱肉丝的时候切了黄瓜丝和少量的大葱垫底，酱香味道浓郁的肉丝伴着清脆的黄瓜，又是另一种味觉的体验哦！</p>
+							<p>不吃肉的我，也学着做了一道很有名的菜“京酱肉丝”。京酱肉丝是一道色香味俱全的汉族名菜，属于东北菜或北京菜。此菜咸甜适中，酱香浓郁，风味独特。选用猪里脊肉为主料，辅以黄酱或甜面酱及其它调味品，食用时辅以葱丝、腐皮，口味咸甜适中，酱香浓郁，风味独特。</p>
+						</li>
+						<li class="li2">
+							<p>猪里脊肉：150克；豆腐皮：1张；黄瓜：1/3根；大葱：1段；甜面酱：1汤勺；姜：两片；植物油：1汤勺；食盐：1/2汤勺；料酒：1/2汤勺；淀粉：1茶匙；</p>
+						</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<button type="button" class="btn btn-primary btn-lg active">收 藏</button>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="m_c_up">
+				<h3>做法：</h3>
+			</div>
+			<ol>
+				<li>里脊肉清洗干净切成均匀的细丝，然后放盐、淀粉、料酒拌匀，腌制片刻<img src="../img/jingjiangrousi/1.jpg" alt=""></li></li>
+				<li>大葱和黄瓜切成细丝，甜面酱加两勺水调稀<img src="../img/jingjiangrousi/2.jpg" alt=""></li>
+				<li>豆腐皮用开水烫一下，切成四方形摆在盘子里<img src="../img/jingjiangrousi/3.jpg" alt=""></li></li>
+				<li>姜切丝，炒锅把油烧热，爆香姜丝<img src="../img/jingjiangrousi/4.jpg" alt=""></li>
+				<li>放入切好的肉丝，迅速的用筷子划开，然后倒入甜面酱<img src="../img/jingjiangrousi/5.jpg" alt=""></li>
+				<li>把切好的大葱和黄瓜丝放在摆好豆腐皮的盘子里，然后把炒好的肉丝倒在上面即可<img src="../img/jingjiangrousi/6.jpg" alt=""></li>
+				<img src="../img/jingjiangrousi/8.jpg" alt="">
+				</ol>
+			<div class="m_c_down">
+				<h3>烹饪技巧：</h3>
+			</div>
+			<div class="m_c_last">
+				<ul>
+					<li>1、外边买回来的豆腐皮最好用开水烫下再食用；</li>
+					<li>2、甜面酱放水稀释下，这样能避免炒制的时候糊锅；</li>
+					<li>3、肉丝因为腌制的时候放了淀粉，所以下锅后要迅速的用筷子划开，避免粘连成一坨。</li>
+					<li>加分技巧：腌制过程中加入家乐鸡粉，还可以去除肉的腥</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="comment_inner">
+			<form action="" class="c_text">
+				<h4>游客评论：</h4>
+				<textarea class="form-control control1" rows="5"></textarea>
+				<button type="button" class="btn btn-info">发表评论</button>
+			</form>
+			<div class="box2"></div>
+			<ul class="c_list">
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>美厨网</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/index2.css">
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="js/kxbdSuperMarquee.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//banner左右滚动
+		var last = $(".banner_inner ul li:last");
+		last.remove();
+		$(".banner_inner ul").prepend(last);
+		$(".banner_inner ul").css("margin-left","-990px");
+		$(".ban_right").click(function(){
+			var first = $(".banner_inner ul li:first");
+			first.remove();
+			$(".banner_inner ul").append(first);
+			$(".banner_inner ul").css("margin-left","0px");
+			$(".banner_inner ul").animate({"margin-left":"-990px"},300);
+		});
+		$(".ban_left").click(function(){
+			$(".banner_inner ul").animate({"margin-left":"0px"},300,function(){
+			var first1=$(".banner_inner ul li:last");
+			first1.remove();
+			$(".banner_inner ul").prepend(first1);
+			$(".banner_inner ul").css("margin-left","-990px");
+		});
+		});
+		// ???????????????????????????????????
+		//banner左右按钮
+		$("#banner").hover(function(){
+			$(this).find(".img3").css("top","-68px");
+			$(this).find(".img4").css("top","-216px")
+		},function(){
+			$(this).find(".img3").css("top","5px");
+			$(this).find(".img4").css("top","5px")
+		});
+		//main_center自动滚动
+		$(".list").kxbdSuperMarquee({
+				distance:990,
+				time:3,
+				btnGo:{left:'.main_c_left',right:'.main_c_right'},
+				direction:'left'
+			});
+		//标题上下滚动
+		$(".t_list li:eq(0)").clone(true).appendTo($(".t_list"));
+	var liHeight = $(".title_inner").height();
+	var totalHeight = ($(".t_list li").length *  $(".t_list li").eq(0).height()) -liHeight;
+	$(".t_list").height(totalHeight);
+	var index = 0;
+	var autoTimer = 0;
+	var clickEndFlag = true; 
+
+	function tab(){
+		$(".t_list").stop().animate({
+			top: -index * liHeight
+		},400,function(){
+			clickEndFlag = true;
+			if(index == $(".t_list li").length -1) {
+				$(".t_list").css({top:0});
+				index = 0;
+			}
+		})
+	}
+
+	function next() {
+		index++;
+		if(index > $(".t_list li").length - 1) {
+			index = 0;
+		}
+		tab();
+	}
+	function prev() {
+		index--;
+		if(index < 0) {
+			index = $(".t_list li").size() - 2;
+			$(".t_list").css("top",- ($(".t_list li").size() -1) * liHeight);
+		}
+		tab();
+	}
+	$(".ban_left").on("click",function() {
+		if(clickEndFlag) {
+			next();
+			clickEndFlag = false;
+		}
+	});
+	$(".ban_right").on("click",function() {
+		if(clickEndFlag) {
+			prev();
+			clickEndFlag = false;
+		}
+	});
+	//菜谱步骤信息上下滑动
+	$(".main_list>li").hover(function(){
+		$(this).find(".main_d_C").stop().animate({"margin-top":"-100px"},300)
+	},function(){
+		$(this).find(".main_d_C").stop().animate({"margin-top":"0px"},300)
+	});
+	//菜谱自动滚动
+	$(".main_d_c").kxbdSuperMarquee({
+				distance:990,
+				time:3,
+				btnGo:{left:'.main_d_left',right:'.main_d_right'},
+				direction:'left'
+			});
+	})
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		
+		    		<li><a href="#" >****</a></li>
+		    		<li><a href="#">我的菜谱</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="html/personal.html">个人中心</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="index.html"><span>首页</span></a></li>
+					<li class="sort1">
+						<a href="#" >菜谱分类</a>
+						<img src="img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="html/jiachang.html">家常菜谱</a></li>
+					            <li><a href="html/zhonghua.html">中华菜系</a></li>
+					            <li><a href="html/waiguocaixi.html">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul class="t_list">
+				<li><p>今日午餐推荐：方圆几公里卖米饭的都把我拉黑了</p></li>
+				<li><p>今日早餐推荐：靓仔靓妹，大早上的就“胃痒”？</p></li>
+				<li><p>今日夜宵推荐：美食界的街头小混子</p></li>
+				<li><p>今日晚餐推荐：好饭不怕晚，那你也别饿懵我啊</p></li>
+				<li><p>今日下午茶推荐：copy大神带你吃撑肚子</p></li>
+			</ul>
+		</div>
+	</div>
+	<div id="banner">
+		<div class="banner_inner">
+			<div class="maskleft"></div>
+			<div class="maskright"></div>
+		    <div class="ban_left">
+		    	<img class="img3" src="img/zzw_bg.png" alt="">
+		    </div>
+		    <div class="ban_right">
+		    	<img class="img4" src="img/zzw_bg.png" alt="">
+		    </div>
+		    <ul>
+			<li>
+				<div class="pic"><a href="html/chashaoyatui.html" target="_blank"><img src="img/b (28).jpg" alt=""></a><div class="pngpic">
+					<p><span>叉烧鸭腿</span></p>
+					<p>味道好，形象佳，小爷自己就干掉一条腿</p>
+				</div></div>
+				<div class="pic"><a href="html/jingjiangrousi.html" target="_blank"><img src="img/b (16).jpg" alt=""></a><div class="pngpic">
+					<p><span>京酱肉丝</span></p>
+					<p>家喻户晓的大名菜，有没有征服你的胃？</p>
+				</div></div>
+				<div class="pic"><a href="html/laoganma.html" target="_blank"><img src="img/b (18).jpg" alt=""></a><div class="pngpic">
+					<p><span>老干妈版红烧豆腐</span></p>
+					<p>知道吗？没有人可以撼动豆腐的位置</p>
+				</div></div>
+			</li>
+			<li>
+				<div class="pic"><a href="html/shangxiaojikuai.html" target="_blank"><img src="img/b (21).jpg" alt=""></a><div class="pngpic">
+					<p><span>改良版上校鸡块</span></p>
+					<p>总是意犹未尽，能让人念念不忘的美味</p>
+				</div></div>
+				<div class="pic"><a href="html/zhashutiao.html" target="_blank"><img src="img/b (22).jpg" alt=""></a><div class="pngpic">
+					<p><span>炸薯条</span></p>
+					<p>复制大神教你copy美食，舌尖上的高科技</p>
+				</div></div>
+				<div class="pic"><a href="html/xiangsudanta.html" target="_blank"><img src="img/b (25).jpg" alt=""></a><div class="pngpic">
+					<p><span>香酥蛋挞</span></p>
+					<p>香甜可口的自制小甜甜，最好吃没有之一</p>
+				</div></div>
+			</li>
+			<li>
+				<div class="pic"><a href="html/ganguocaihua.html" target="_blank"><img src="img/b (24).jpg" alt=""></a><div class="pngpic">
+					<p><span>干锅菜花</span></p>
+					<p>秒做一大锅美味菜花，嘿！开饭啦</p>
+				</div></div>
+				<div class="pic"><a href="html/juanxincai.html" target="_blank"><img src="img/b (23).jpg" alt=""></a><div class="pngpic">
+					<p><span>醋溜卷心菜</span></p>
+					<p>看饿了别怪我，谁让你不吃饭就进来的</p>
+				</div></div>
+				<div class="pic"><img src="img/b (1).jpg" alt=""><div class="pngpic">
+					<p><span>油焖香菇</span></p>
+					<p>解救饿抽了的你，晚餐别错过的健康菜</p>
+				</div></div>
+			</li>
+			<li>
+				<div class="pic"><a href="html/jichibaofan.html" target="_blank"><img src="img/b (26).jpg" alt=""></a><div class="pngpic">
+					<p><span>鸡翅包饭</span></p>
+					<p>快救救我，我要被你的口水淹没了</p>
+				</div></div>
+				<div class="pic"><a href="html/kaolengmian.html" target="_blank"><img src="img/b (27).jpg" alt=""></a><div class="pngpic">
+					<p><span>烤冷面</span></p>
+					<p>大晚上的眼睛放光，聚焦在你身上</p>
+				</div></div>
+				<div class="pic"><a href="html/tiebanyouyu.html" target="_blank"><img src="img/b (20).jpg" alt=""></a><div class="pngpic">
+					<p><span>铁板鱿鱼</span></p>
+					<p>这一盘就是你减肥路上的最大阻力</p>
+				</div></div>
+			</li>
+			<li>
+				<div class="pic"><a href="html/guangshichangfen.html" target="_blank"><img src="img/b (17).jpg" alt=""></a><div class="pngpic">
+					<p><span>微波炉广式肠粉</span></p>
+					<p>不是肠，不是粉，你到底是何方妖孽？</p>
+				</div></div>
+				<div class="pic"><a href="html/shaomai.html" target="_blank"><img src="img/b (29).jpg" alt=""></a><div class="pngpic">
+					<p><span>鲜肉烧卖</span></p>
+					<p>来吧，让你的味蕾体验极致的鲜肉盛宴！</p>
+				</div></div>
+				<div class="pic"><a href="html/shuijingxiajiao.html" target="_blank"><img src="img/b (19).jpg" alt=""></a><div class="pngpic">
+					<p><span>水晶虾饺</span></p>
+					<p>一口就满足口腹之欲的鲜嫩四溢的虾饺！</p>
+				</div></div>
+			</li>
+		    </ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_top">
+			<p>7月，清热祛湿气</p>
+		</div>
+		<div class="main_center">
+			<div class="main_c_left"></div>
+			<div class="main_c_right"></div>
+			<div class="list">
+			<ul>
+				<li>
+					<div class="content">
+						<div class="c_top"><a href="html/content1.html"><img src="img/c.jpg" alt=""></a></div>
+						<div class="c_img1"><img src="img/ztfixer.gif" alt=""></div>
+						<div class="c_mid"><a href="#">和菓子の物语</a></div>
+						<div class="c_bot"><p>和菓子の物语，总有一款美哭你~~</p></div>
+					</div>
+					<div class="content content1">
+						<div class="c_top"><a href="#"><img src="img/d.jpg" alt=""></a></div>
+						<div class="c_img1"><img src="img/ztfixer.gif" alt=""></div>
+						<div class="c_mid"><a href="#">和菓子の物语</a></div>
+						<div class="c_bot"><p>和菓子の物语，总有一款美哭你~~</p></div>
+					</div>
+					<div class="content content2">
+						<div class="c_top"><a href="#"><img src="img/e.jpg" alt=""></a></div>
+						<div class="c_img1"><img src="img/ztfixer.gif" alt=""></div>
+						<div class="c_mid"><a href="#">和菓子の物语</a></div>
+						<div class="c_bot"><p>和菓子の物语，总有一款美哭你~~</p></div>
+					</div>
+				</li>
+				<li>
+					<div class="content content3">
+						<div class="c_top"><a href="#"><img src="img/s.jpg" alt=""></a></div>
+						<div class="c_img1"><img src="img/ztfixer.gif" alt=""></div>
+						<div class="c_mid"><a href="#">和菓子の物语</a></div>
+						<div class="c_bot"><p>和菓子の物语，总有一款美哭你~~</p></div>
+					</div>
+					<div class="content content4">
+						<div class="c_top"><a href="#"><img src="img/4c.jpg" alt=""></a></div>
+						<div class="c_img1"><img src="img/ztfixer.gif" alt=""></div>
+						<div class="c_mid"><a href="#">和菓子の物语</a></div>
+						<div class="c_bot"><p>和菓子の物语，总有一款美哭你~~</p></div>
+					</div>
+					<div class="content content5">
+						<div class="c_top"><a href="#"><img src="img/ac.jpg" alt=""></a></div>
+						<div class="c_img1"><img src="img/ztfixer.gif" alt=""></div>
+						<div class="c_mid"><a href="#">和菓子の物语</a></div>
+						<div class="c_bot"><p>和菓子の物语，总有一款美哭你~~</p></div>
+					</div>
+				</li>
+			</ul>
+			</div>
+		</div>
+		<div class="main_down">
+			<div class="main_d_left"></div>
+			<div class="main_d_right"></div>
+			<div class="main_d_c">
+				<ul>
+					<li>
+						<div class="main_d_up">
+							<p>热门菜谱1</p>
+						</div>
+						<div class="main_d_down">
+							<ul class="main_list">
+								<li><a href="#"><div class="main_d_img"><img src="img/a6.jpg" alt=""></div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">辣炒花蛤</p>
+										<p class="p2">100 评论 100 人气</p>
+										<p class="p3">用户用户ID</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">8步 /大概10分钟</p>
+										<p class="p5">炒 /香辣味</p>
+										<img class="img5" src="img/aa.jpg" alt="">
+										<img class="img6" src="img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+								<li class="main_l_li"><a href="#">
+									<div class="main_d_img">
+										<img src="img/a41.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">紫苏美极虾</p>
+										<p class="p2">100 评论 100 人气</p>
+										<p class="p3">用户用户ID</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">10步 /大概15分钟</p>
+										<p class="p5">炒 /家常味</p>
+										<img class="img5" src="img/aa.jpg" alt="">
+										<img class="img6" src="img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+								<li class="main_l_li main_l_li1"><a href="#">
+									<div class="main_d_img">
+										<img src="img/a28.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">凉拌海蜇</p>
+										<p class="p2">100 评论 100 人气</p>
+										<p class="p3">用户用户ID</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">9步 /大概5分钟</p>
+										<p class="p5">拌 /酸味</p>
+										<img class="img5" src="img/aa.jpg" alt="">
+										<img class="img6" src="img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+								<li class="main_l_li main_l_li1"><a href="#">
+									<div class="main_d_img">
+										<img src="img/d1.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">冬阴功海鲜汤</p>
+										<p class="p2">100 评论 100 人气</p>
+										<p class="p3">用户用户ID</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">22步 /大概数小时</p>
+										<p class="p5">煮 /香辣味</p>
+										<img class="img5" src="img/aa.jpg" alt="">
+										<img class="img6" src="img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="main_d_up">
+							<p>热门菜谱2</p>
+						</div>
+						<div class="main_d_down">
+							<ul class="main_list">
+								<li><a href="#">
+									<div class="main_d_img"><img src="img/210.jpg" alt=""></div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">蒜香番茄酱烤鸡翅</p>
+										<p class="p2">100 评论 100 人气</p>
+										<p class="p3">用户用户ID</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">5步 /大概30分钟</p>
+										<p class="p5">烤 /蒜香味</p>
+										<img class="img5" src="img/aa.jpg" alt="">
+										<img class="img6" src="img/bb.jpg" alt="">
+									</div>
+								</div>
+								</a>
+							</li>
+								<li class="main_l_li"><a href="html/mizhipaigu.html" target="_blank">
+									<div class="main_d_img">
+										<img src="img/a4.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">香蒜蜜汁排骨</p>
+										<p class="p2">100 评论 100 人气</p>
+										<p class="p3">用户用户ID</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">10步 /大概30分钟</p>
+										<p class="p5">烧 /蒜香味</p>
+										<img class="img5" src="img/aa.jpg" alt="">
+										<img class="img6" src="img/bb.jpg" alt="">
+									</div>
+								</div>
+							</a></li>
+								<li class="main_l_li main_l_li1"><a href="#">
+									<div class="main_d_img">
+										<img src="img/a36.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">私房老坛酸菜牛肉面</p>
+										<p class="p2">100 评论 100 人气</p>
+										<p class="p3">用户用户ID</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">18步 /大概30分钟</p>
+										<p class="p5">煮 /酸辣味</p>
+										<img class="img5" src="img/aa.jpg" alt="">
+										<img class="img6" src="img/bb.jpg" alt="">
+									</div>
+								</div>
+							</a></li>
+								<li class="main_l_li main_l_li1"><a href="#">
+									<div class="main_d_img">
+										<img src="img/dff.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">东北大拉皮</p>
+										<p class="p2">100 评论 100 人气</p>
+										<p class="p3">用户用户ID</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">12步 /大概30分钟</p>
+										<p class="p5">其他工艺 /酸辣味</p>
+										<img class="img5" src="img/aa.jpg" alt="">
+										<img class="img6" src="img/bb.jpg" alt="">
+									</div>
+								</div>
+							</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="main_d_up">
+							<p>热门菜谱3</p>
+						</div>
+						<div class="main_d_down">
+							<ul class="main_list">
+								<li><a href="#"><div class="main_d_img"><img src="img/awe.jpg" alt=""></div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">芒果冰淇淋</p>
+										<p class="p2">100 评论 100 人气</p>
+										<p class="p3">用户用户ID</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">9步 /大概数小时</p>
+										<p class="p5">冻 /甜味</p>
+										<img class="img5" src="img/aa.jpg" alt="">
+										<img class="img6" src="img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+								<li class="main_l_li"><a href="#">
+									<div class="main_d_img">
+										<img src="img/asd.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">奥利奥香蕉奶昔</p>
+										<p class="p2">100 评论 100 人气</p>
+										<p class="p3">用户用户ID</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">3步 /大概5分钟</p>
+										<p class="p5">其他工艺 /奶香味</p>
+										<img class="img5" src="img/aa.jpg" alt="">
+										<img class="img6" src="img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+								<li class="main_l_li main_l_li1"><a href="#">
+									<div class="main_d_img">
+										<img src="img/a67.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">酸奶思慕雪</p>
+										<p class="p2">100 评论 100 人气</p>
+										<p class="p3">用户用户ID</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">9步 /大概数小时</p>
+										<p class="p5">冻 /果味</p>
+										<img class="img5" src="img/aa.jpg" alt="">
+										<img class="img6" src="img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+								<li class="main_l_li main_l_li1"><a href="#">
+									<div class="main_d_img">
+										<img src="img/a732.jpg" alt="">
+									</div>
+								<div class="main_d_C">
+									<div class="main_d_C_up">
+										<p class="p1">泰式椰香冰爽茶</p>
+										<p class="p2">100 评论 100 人气</p>
+										<p class="p3">用户用户ID</p>
+									</div>
+									<div class="main_d_C_down">
+										<p class="p4">6步 /大概5分钟</p>
+										<p class="p5">泡 /奶茶味</p>
+										<img class="img5" src="img/aa.jpg" alt="">
+										<img class="img6" src="img/bb.jpg" alt="">
+									</div>
+								</div></a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="#"><img src="img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="img/1.png" alt=""></a>
+				<img src="img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_c">
+					<ul>
+						<li>友情链接：</li>
+						<li><a class="asd" href="#">燕大教务网</a></li>
+						<li><a href="#">燕大教务网</a></li>
+						<li><a href="#">燕大教务网</a></li>
+						<li><a href="#">燕大教务网</a></li>
+						<li><a href="#">燕大教务网</a></li>
+						<li><a href="#">燕大教务网</a></li>
+						<li><a href="#">燕大教务网</a></li>
+					</ul>
+				</div>
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

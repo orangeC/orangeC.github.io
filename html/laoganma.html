@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>老干妈红烧豆腐</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/mizhipaigu.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		//菜谱分类
+		$(".nav_main ul li:eq(1)").hover(function(){
+			$(this).find(".img1").hide();
+			$(".nav_sort").stop().slideDown(500)
+		},function(){
+			$(".nav_sort").stop().slideUp(500);
+			$(this).find(".img1").show();
+		});
+		//iconfont划过大小
+		$(".m_up_right>ul>li").hover(function(){
+			$(this).find(".iconfont").css("font-size","35px")
+		},function(){
+			$(this).find(".iconfont").css("font-size","31px")
+		});
+		//简介原料
+		$(".btn2").click(function(){
+			$(this).parent().find(".li1").hide().siblings().show()
+		});
+		$(".btn1").click(function(){
+			$(this).parent().find(".li2").hide().siblings().show()
+		});
+		$(".btn-primary").click(function(){
+			alert("收藏成功！")
+		});
+		$("body").on("click",".btn-info",function(){
+			var v = $(this).prev().val();
+			var it = $("<li>" +v+"<a class='del'>删除</a></li>");
+			$(".c_list").append(it);
+	        $(".del").click(function(){
+            $(this).parent().remove();
+		})
+		});
+	})
+
+	</script>
+</head>
+<body>
+	<div id="up">
+		<div class="up_inner">
+		    <div class="logo">
+		    	<img src="../img/ww.png" alt="">
+		    </div>
+		    <div class="search">
+		    	<form action="" name="" class="">
+		    		<input type="text" class="form-control" >
+		    		<button type="button" class="btn btn-danger">搜 索</button>
+		    	</form>
+		    </div>
+		    <div class="login">
+		    	<ul>
+		    		<li><a href="../html/login.html" >用户登录</a></li>
+		    		<li><a href="../html/zhuce.html" >用户注册</a></li>
+		    		<li><a href="#">我的厨房</a></li>
+		    		<li><a href="#">我的菜单</a></li>
+		    		<li><a href="#">我的好友</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav_inner">
+			<div class="nav_main">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="sort1">
+						<a href="#" ><span>菜谱分类</span></a>
+						<img src="../img/2.jpg" class="img1" alt="">
+						<div class="nav_sort">
+				            <ul>
+					            <li><a href="#">家常菜谱</a></li>
+					            <li><a href="#">中华菜系</a></li>
+					            <li><a href="#">外国菜系</a></li>
+					            <li><a href="#">厨房百科</a></li>
+					            <li><a href="#">各地小吃</a></li>
+					            <li><a href="#">烘焙</a></li>
+					            <img src="../img/jccp_navbgg.png" class="img2" alt="">
+				            </ul>
+			            </div>
+					</li>
+					<li><a href="#">热门专题</a>
+					<li><a href="#">最近流行</a></li>
+					<li><a href="#">往期头条</a></li>
+					<li><a href="#">月度最佳</a></li>
+					<li><a href="#">厨房101</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_inner">
+			<ul>
+				<li><a href="../index.html">&nbsp首页&nbsp</a>></li>
+				<li><a href="#">&nbsp家常菜谱&nbsp</a>></li>
+				<li>&nbsp老干妈红烧豆腐</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="main_up">
+			<div class="m_up_left"><img src="../img/laoganma/10.jpg" alt="1111"></div>
+			<div class="m_up_right">
+				<ul>
+					<li><i class="iconfont iconfont1">&#xe669;</i> 入口即化的豆腐</li>
+					<li><i class="iconfont iconfont2">&#xe65e;</i> 老干妈红烧豆腐</li>
+					<li><i class="iconfont iconfont3">&#xe619;</i> 工艺：&nbsp&nbsp烧</li>
+					<li><i class="iconfont iconfont4">&#xe638;</i> 口味：&nbsp&nbsp酱香味</li>
+					<li><i class="iconfont iconfont5">&#xe6c0;</i> 烹饪时间：<15分钟</li>
+					<li><i class="iconfont iconfont6">&#xe611;</i> 色香味俱全</li>
+				</ul>
+				<div class="m_up_right_p"><p>老干妈红烧豆腐</p></div>
+				<div class="m_up_right_c">
+					<button class="btn btn-default btn1" type="submit">简介</button>
+					<button class="btn btn-default btn2" type="submit">用料</button>
+					<ul>
+						<li class="li1">
+							<p>过节了，回家吃团圆饭已经成为了一种传统，在家宴当中酒水自然少不了，下酒菜是必不可少的，在外聚餐吃的是气势，在家聚餐吃的是气氛。日子在变，心境在变，不变的唯有佳节浓浓的、化不开的情。幸福的团圆饭也就成为每个家庭的重头戏，家宴讲究荤素和营养搭配。</p>
+							<p>“豆腐”与“头富”“同福”的谐音，民间还盛行豆腐宴；豆腐宴属于鲁菜；是汉族传统名宴。大概始于古代帝王来泰山封禅祭祀时，“食素斋，整洁身心”。在节日吃豆腐寄予了人们要“富贵”“平安”“吉祥”的美好心愿。豆腐不单纯寓意吉祥；而且吃对豆腐还能让你轻松减肥哦~减肥可是女性一生的奋斗目标！</p>
+						</li>
+						<li class="li2">
+							<p>豆腐一块，老干妈豆豉酱：5-6勺，生姜：1个，有机酱油：1勺，淀粉：1勺，大蒜：3瓣，盐：1勺，油：2勺</p>
+						</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<button type="button" class="btn btn-primary btn-lg active">收 藏</button>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="m_c_up">
+				<h3>做法：</h3>
+			</div>
+			<ol>
+				<li>准备一块嫩豆腐。红烧豆腐我觉得嫩豆腐烧出来更加入味，入口滑嫩。用汤汁泡饭，非常下饭的<img src="../img/laoganma/1.jpg" alt=""></li>
+				<li>豆腐洗净，切成小块。豆腐切成小方块后，用开水烫一下去除豆腥味。生姜大蒜剁成末备用<img src="../img/laoganma/2.jpg" alt=""></li>
+				<li>锅中放进新油，爆香生姜和大蒜末<img src="../img/laoganma/3.jpg" alt=""></li></li>
+				<li>加入1勺盐到豆腐里<img src="../img/laoganma/4.jpg" alt=""></li>
+				<li>加入1杯清水至锅中。用中火烧到咸味渗透到豆腐里。如果事先不加入盐，等豆腐烧好后，外面有咸味，里面却淡淡的无味道，非常影响口感哦<img src="../img/laoganma/5.jpg" alt=""></li>
+				<li>调进有机酱油提鲜效果明显<img src="../img/laoganma/6.jpg" alt=""></li>
+				<li>放进5-6勺老干妈。量要放足哦</li><img src="../img/laoganma/7.jpg" alt=""></li>
+				<li>中火煮开完全上色后煮透，加入水淀粉挂汁即可</li><img src="../img/laoganma/9.jpg" alt=""></li>
+			</ol>
+			<div class="m_c_down">
+				<h3>烹饪技巧：</h3>
+			</div>
+			<div class="m_c_last">
+				<ul>
+					<li>1.豆腐切成小方块后，用开水烫一下去除豆腥味。</li> 　　
+                    <li>2.用中火烧到咸味渗透到豆腐里。</li> 　　
+                    <li>3.如果事先不加入盐，等豆腐烧好后，外面有咸味，里面却淡淡的无味道，非常影响口感哦~ </li>　　
+                    <li>4.禾然有机酱油是一种不可多得的上等调味品。天然生态食品；含有浓郁的酱香和脂香，提鲜效果明显。</li><li>5.选择嫩豆腐烧出来更加入味，入口滑嫩</li>　　
+                    <li>6.老干妈的量要放足哦~ 最好是能够全部将豆腐染成红色</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<div class="comment_inner">
+			<form action="" class="c_text">
+				<h4>游客评论：</h4>
+				<textarea class="form-control control1" rows="5"></textarea>
+				<button type="button" class="btn btn-info">发表评论</button>
+			</form>
+			<div class="box2"></div>
+			<ul class="c_list">
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer_inner">
+			<div class="f_left">
+				<a href="../index.html"><img src="../img/bb.png" alt=""></a>
+				<ul>
+					<li>让做饭成为一种艺术</li>
+					<li>柴米油盐</li>
+					<li>烹饪人生百味</li>
+					<li>锅碗瓢盆</li>
+					<li>响华美篇章</li>
+				</ul>
+			</div>
+			<div class="f_right">
+				<a href="http://edu.ruanko.com/" target="_blank"><img class="img7" src="../img/logo.png" alt=""></a>
+				<p>骚年，今天你写日志了没？</p>
+				<a href="http://www.ruanko.com/" target="_blank"><img class="img8" src="../img/1.png" alt=""></a>
+				<img src="../img/rf.jpg" class="img9" alt="">
+			</div>
+			<div class="f_b">
+				<div class="f_b_b">
+					<ul>
+						<li>关于我们 &nbsp|</li>
+						<li>&nbsp&nbsp官方微博&nbsp |</li>
+						<li>&nbsp&nbsp版权声明&nbsp |</li>
+						<li>&nbsp&nbsp联系我们&nbsp |</li>
+						<li>&nbsp&nbsp隐私保护&nbsp |</li>
+						<li>&nbsp&nbsp网站地图</li>
+					</ul>
+					<p>Copyright© 2000-2017 Abcdefghij Technologies Co., Ltd. 粤B2-2010**** 粤ICP备12345678号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
