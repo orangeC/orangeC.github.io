@@ -6,14 +6,13 @@ body{
 	font-family: "微软雅黑";
 }
 #up{
-	width: 100%;
 	height: 120px;
 	background-color: #dd7107;
 }
 .up_inner{
-	width: 990px;
-	height: 120px;
 	margin: 0 auto;
+	max-width: 1024px;
+	height: 120px;
 }
 .logo{
 	width: 184px;
@@ -75,13 +74,12 @@ body{
 	line-height: 30px;
 }
 .nav{
-	width: 100%;
 	height: 76px;
 }
 .nav_inner{
-	width: 990px;
-	height: 76px;
 	margin: 0 auto;
+	max-width: 990px;
+	height: 76px;
 	position: relative;
 }
 .nav_main{
@@ -154,7 +152,7 @@ body{
 	background-image: url(../img/4.jpg);
 }
 .title_inner{
-	width: 990px;
+	max-width: 990px;
 	height: 120px;
 	margin: 0 auto;
 	overflow: hidden;
