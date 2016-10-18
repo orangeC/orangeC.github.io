@@ -27,6 +27,7 @@ left: 50%;
 position: absolute;
 z-index: 10;
 }
+
 a{
 	color: #333;
 }
@@ -85,4 +86,12 @@ a{
 .img6{
 	margin-left: 270px;
 	top: 600px;
+}
+@media(max-width: 1090px){
+	.img1{
+		left: 40%;
+	}
+	.img6{
+		margin-left: 200px;
+	}
 }
